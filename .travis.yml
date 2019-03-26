@@ -1,11 +1,16 @@
 matrix:
   include:
     - language: node_js
+      node_js:
+        - "11"
       before_script:
         - cd frontend
       script: 
         - npm install
         - npm build
+      cache:
+        directories:
+        - node_modules
 
     - language: java
       jdk: oraclejdk8
@@ -14,7 +19,3 @@ matrix:
       script: 
         - cd ../backend
         - mvn clean package
-
-cache:
-  directories:
-  - node_modules
