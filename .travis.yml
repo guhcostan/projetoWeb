@@ -1,13 +1,17 @@
 language: java
 
 before_script:
-- cd backend
+- cd frontend
 
 jdk:
 - oraclejdk8
 
-
-script: mvn clean install jacoco:report coveralls:report
+script: 
+  -npm install
+  -npm build
+  -cd ../backend
+  -mvn clean package
+  
 cache:
   directories:
   - node_modules
