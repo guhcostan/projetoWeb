@@ -1,6 +1,12 @@
 language: java
+
+before_script:
+- cd backend
+
 jdk:
 - oraclejdk8
+
+
 script: mvn clean install jacoco:report coveralls:report
 cache:
   directories:
