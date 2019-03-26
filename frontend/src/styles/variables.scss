@@ -1,0 +1,137 @@
+/* -------------------------------------------------------- */
+/*--------------- Variáveis globais do sistema ------------ */
+/* -------------------------------------------------------- */
+
+/* Cores do tema do sistema */
+$primary:       #38598b !default;
+$secondary:     #113f67 !default;
+$success:       #66BB6A !default;
+$info:          #17a2b8 !default;
+$warning:       #FFA726 !default;
+$danger:        #F56C6C !default;
+$light:         #efefef !default;
+$dark:          #353B48 !default;
+
+// Background
+$default-background-color:							#F5F5F5;
+$selected-background-color:							#FAFAFA;
+
+// Bordas
+$default-border-color:								#DCDFE6;
+$default-border-radius:								4px;
+$alert-border-radius:								0px 4px 4px 0px;
+$error-border-color:								$danger;
+
+// Fontes
+$primary-font-color:								#303133;
+$secondary-font-color:								#909399;
+$disabled-font-color:								#C0C4CC;
+$error-color:										$danger;
+
+// Cor Cultura
+$soja-color:								#FFEE58;
+$milho-color:								#9CCC65;
+$algodao-color:								#FFFFFF;
+
+// Header
+
+$header-height: 70px;
+
+/* Para utilizar o font-size:::: =  map-get($font-size, tamanho-que-desejar) */
+$font-size: (
+	xx-small:			 10px,
+	x-small:        	 12px,
+	small:               13px,
+	default:             14px,
+	medium:              15px,
+	big:                 16px,
+	bigger:              18px,
+	large:               20px,
+	x-large:             24px,
+	xx-large:            36px
+);
+
+$font-size-icon: (
+				xx-small: 13px,
+				x-small: 16px,
+				small: 18px,
+				default: 19px,
+				medium: 22px,
+				large: 32px,
+				x-large: 40px
+);
+
+$font-size-icon-small: (
+				xx-small: 11px,
+				x-small: 14px,
+				small: 15px,
+				default: 16px,
+				medium: 18px,
+				large: 28px,
+				x-large: 34px
+);
+
+$font-weight: (
+	normal:            normal,
+	medium:             500
+);
+
+
+
+/* Float boxes */
+
+$float-box-title-bg-color: #ECF0F1;
+$float-box-title-height: 56px;
+$float-box-title-padding-top: 19px;
+$float-box-title-font-size: 16px;
+$float-box-title-extras-padding: 10px;
+$float-box-title-hr-color: #DDD;
+$float-box-close-icon-size: 16px;
+
+$float-box-footer-bg-color: #ECF0F1;
+$float-box-footer-height: 30px;
+
+$float-box-nav-font-color: #777777;
+$float-box-nav-active-font-color: #555555;
+$float-box-nav-font-size: 14px;
+
+$float-box-content-padding-top: 15px;
+$float-box-content-padding-bottom: 10px;
+$float-box-content-top: $float-box-title-height; // Computed
+
+$float-box-nav-icons-color: #9E9E9E;
+$float-box-nav-icons-separator-color: #DDD;
+
+$float-box-section-title-color: #666;
+$float-box-section-hr-color: #AAA;
+
+$float-box-content-menu-font-size: 12px;
+$float-box-content-menu-action-link-padding: 5px;
+$float-box-content-menu-height: 30px;
+
+
+/* Badges */
+
+$badge-font-size:                   0.85em;
+$badge-font-weight:                 400 !default;
+$badge-padding-y:                   .4em !default;
+$badge-padding-x:                   .4em !default;
+
+
+/* Menu Lateral */
+
+$menu-lateral-width: 70px;
+$menu-lateral-box-btn-margin-top: 15px;
+$menu-lateral-box-btn-margin-left: 0;
+$menu-lateral-box-btn-width: 20px;
+$menu-lateral-box-btn-height: 40px;
+$menu-lateral-box-btn-bg-color: #FFF;
+$menu-lateral-box-btn-hover-bg-color: #EEEEEE;
+$menu-lateral-box-btn-icon-size: 18px;
+$menu-lateral-box-btn-icon-color: #777777;
+$menu-lateral-box-btn-hover-icon-color: #555555;
+$menu-lateral-box-btn-radius: 4px;
+
+$menu-lateral-box-view-width: 400px;
+$menu-lateral-box-buttons-bar-width: $menu-lateral-box-btn-width;
+$footer-height: 75px;

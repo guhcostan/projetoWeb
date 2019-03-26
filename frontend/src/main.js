@@ -3,7 +3,17 @@ import App from './App.vue'
 import router from './router'
 import store from './store'
 
-Vue.config.productionTip = false
+import 'jquery/dist/jquery.min.js';
+import 'blockui/jquery.blockui.min';
+import '@/styles/main.scss';
+
+import ElementUI from 'element-ui';
+
+Vue.prototype.$bus = new Vue();
+
+Vue.config.productionTip = false;
+
+Vue.use(ElementUI);
 
 new Vue({
   router,

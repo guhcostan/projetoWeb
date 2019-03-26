@@ -1,0 +1,78 @@
+@import 'variables.scss';
+@import 'loading.scss';
+@import 'mixins.scss';
+
+
+html {
+  font-size: map-get($font-size, default);
+  color: $primary-font-color;
+  width: 100%;
+  height: 100%;
+  background-color: $default-background-color;
+}
+
+body {
+  background-color: $default-background-color;
+  color: $primary-font-color;
+  width: 100%;
+  height: 100%;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  font-weight: map_get($font-weight, normal);
+}
+
+
+@media screen and (min-width: 1281px) {
+  h1 {
+    font-size: map_get($font-size, x-large); // 24px
+  }
+
+  h2 {
+    font-size: map_get($font-size, large); // 20px
+  }
+
+  h3 {
+    font-size: map_get($font-size, bigger); // 18px
+  }
+
+  h4 {
+    font-size: map_get($font-size, big); // 16px
+  }
+
+  h5 {
+    font-size: map_get($font-size, default); // 14px
+  }
+
+  h6 {
+    font-size: map_get($font-size, x-small); // 12px
+  }
+}
+
+@media screen and (max-width: 1281px){
+  h1 {
+    font-size: map_get($font-size, large); // 20px
+  }
+
+  h2 {
+    font-size: map_get($font-size, bigger); // 18px
+  }
+
+  h3 {
+    font-size: map_get($font-size, big); // 16px
+  }
+
+  h4 {
+    font-size: map_get($font-size, default); // 14px
+  }
+
+  h5 {
+    font-size: map_get($font-size, x-small); // 12px
+  }
+
+  h6 {
+    font-size: map_get($font-size, xx-small); // 10px
+  }
+}
+
