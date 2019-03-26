@@ -1,17 +1,20 @@
-language: java
+matrix:
+  include:
+    - language: node_js
+      before_script:
+        - cd frontend
+      script: 
+        -npm install
+        -npm build
 
-before_script:
-- cd frontend
+    - language: java
+    - jdk: oraclejdk8
+      before_script:
+        - cd backend
+      script: 
+        -cd ../backend
+        -mvn clean package
 
-jdk:
-- oraclejdk8
-
-script: 
-  -npm install
-  -npm build
-  -cd ../backend
-  -mvn clean package
-  
 cache:
   directories:
   - node_modules
