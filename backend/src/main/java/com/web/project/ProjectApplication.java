@@ -12,8 +12,13 @@ import org.springframework.scheduling.annotation.EnableScheduling;
 @EnableScheduling
 public class ProjectApplication {
 
-    public static void main(String[] args) {
-        SpringApplication.run(ProjectApplication.class, args);
-    }
+	private ProjectApplication() {
+
+	}
+
+	public static void main(String[] args) {
+
+		SpringApplication.run(ProjectApplication.class, args);
+	}
 
 }
