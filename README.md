@@ -1,9 +1,3 @@
-<h1 align="center">Projeto WEB</h1>
-<h4 align="center">Projeto criado para disciplina de Programação WEB.</h4>
-
-<p align="center">
-  <img src="https://github.com/guhcostan/projetoWeb/blob/master/frontend/logo.png?raw=true">
-</p>
 
 [![Build Status][travis-image]][travis-url]
 [![License Apache](https://img.shields.io/badge/licence-Apache%202.0-blue.svg)](https://github.com/guhcostan/projetoWeb/blob/master/LICENCE.txt)
@@ -18,6 +12,12 @@
 [![vunerability](https://sonarcloud.io/api/project_badges/measure?project=guhcostan_projetoWeb&metric=vulnerabilities)](https://sonarcloud.io/component_measures?id=guhcostan_projetoWeb&metric=vulnerabilities)
 [![duplicated lines](https://sonarcloud.io/api/project_badges/measure?project=guhcostan_projetoWeb&metric=duplicated_lines_density)](https://sonarcloud.io/component_measures?id=guhcostan_projetoWeb&metric=duplicated_lines_density)
 
+<h1 align="center">Projeto WEB</h1>
+<h4 align="center">Projeto criado para disciplina de Programação WEB.</h4>
+
+<p align="center">
+  <img src="https://github.com/guhcostan/projetoWeb/blob/master/frontend/logo.png?raw=true">
+</p>
 
 ## Installation
 
