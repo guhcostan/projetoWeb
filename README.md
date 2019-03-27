@@ -18,7 +18,7 @@
 
 One to two paragraph statement about your product and what it does.
 
-![](header.png)
+![](https://github.com/guhcostan/projetoWeb/blob/master/frontend/logo.png?raw=true)
 
 ## Installation
 
