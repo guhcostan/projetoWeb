@@ -14,8 +14,11 @@ matrix:
 
     - language: java
       jdk: oraclejdk8
+      cache:
+        directories:
+          - $HOME/.m2
       before_script:
         - cd backend
       script: 
         - cd ../backend
-        - mvn clean package sonar:sonar -Dsonar.projectKey=guhcostan_projetoWeb -Dsonar.organization=guhcostan-github -Dsonar.host.url=https://sonarcloud.io  -Dsonar.login=$SONAR_TOKEN
+        - mvn clean org.jacoco:jacoco-maven-plugin:prepare-agent package sonar:sonar -Dsonar.projectKey=guhcostan_projetoWeb -Dsonar.organization=guhcostan-github -Dsonar.host.url=https://sonarcloud.io  -Dsonar.login=$SONAR_TOKEN
