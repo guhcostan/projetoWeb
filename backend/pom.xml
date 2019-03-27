@@ -56,11 +56,108 @@
 
 	<build>
 		<plugins>
+
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
+
+			<!--Plugin de Code Coverage-->
+			<plugin>
+				<groupId>org.jacoco</groupId>
+				<artifactId>jacoco-maven-plugin</artifactId>
+				<version>0.8.2</version>
+				<executions>
+					<execution>
+						<id>prepare-agent</id>
+						<goals>
+							<goal>prepare-agent</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+
+			<!--Plugin de qualidade de código-->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-pmd-plugin</artifactId>
+				<version>3.11.0</version>
+				<configuration>
+					<failOnViolation>true</failOnViolation>
+					<failurePriority>5</failurePriority>
+					<printFailingErrors>true</printFailingErrors>
+				</configuration>
+				<executions>
+					<execution>
+						<goals>
+							<goal>check</goal>
+						</goals>
+						<configuration>
+							<excludeFromFailureFile>exclude-pmd.properties</excludeFromFailureFile>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+
+			<!--Plugin de regras de estilo de codigo-->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-checkstyle-plugin</artifactId>
+				<version>3.0.0</version>
+				<executions>
+					<execution>
+						<id>validate</id>
+						<goals>
+							<goal>check</goal>
+						</goals>
+						<phase>validate</phase>
+						<configuration>
+							<configLocation>checkstyle.xml</configLocation>
+							<suppressionsLocation>checkstyle-suppressions.xml</suppressionsLocation>
+							<encoding>${project.build.sourceEncoding}</encoding>
+							<consoleOutput>true</consoleOutput>
+							<failsOnError>true</failsOnError>
+							<includeTestSourceDirectory>true</includeTestSourceDirectory>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+
+			<plugin>
+				<groupId>com.mycila</groupId>
+				<artifactId>license-maven-plugin</artifactId>
+				<version>2.11</version>
+				<configuration>
+					<header>com/mycila/maven/plugin/license/templates/APACHE-2.txt</header>
+					<properties>
+						<owner>Gustavo Costa Neves</owner>
+					</properties>
+					<skipExistingHeaders>true</skipExistingHeaders>
+				</configuration>
+				<executions>
+					<execution>
+						<id>install-format</id>
+						<phase>install</phase>
+						<goals>
+							<goal>format</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
 		</plugins>
 	</build>
+
+	<developers>
+		<developer>
+			<id>guhcostan</id>
+			<name>Gustavo Costa Neves</name>
+			<email>gustavo.neves@aluno.ufla.br</email>
+			<roles>
+				<role>administrator</role>
+				<role>developer</role>
+			</roles>
+			<timezone>-3</timezone>
+		</developer>
+	</developers>
 
 </project>
