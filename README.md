@@ -15,12 +15,11 @@
 [![duplicated lines](https://sonarcloud.io/api/project_badges/measure?project=guhcostan_projetoWeb&metric=duplicated_lines_density)](https://sonarcloud.io/component_measures?id=guhcostan_projetoWeb&metric=duplicated_lines_density)
 
 
-
-One to two paragraph statement about your product and what it does.
+Projeto criado com tecnologias Vuejs e Spring para colocar em praticas conhecimentos recebidos da materia de Desenvolvimento WEB fornecida pela Faculdade Federal de Lavras(UFLA)
 
 ![](header.png)
 
-## Installation
+## Instalação
 
 OS X & Linux:
 
@@ -32,14 +31,11 @@ cd ../backend
 mvn spring-boot:run
 ```
 
+## Exemplo de uso
 
-## Usage example
+--TO DO
 
-A few motivating and useful examples of how your product can be used. Spice this up with code blocks and potentially more screenshots.
-
-## Development setup
-
-Describe how to install all development dependencies and how to run an automated test-suite of some kind. Potentially do this for multiple platforms.
+## Deploy
 
 ```sh
 cd frontend
@@ -55,13 +51,13 @@ mvn clean package
 
 ## Meta
 
-Gustavo Costa – [@YourTwitter](https://instagram.com/guhcostan) – gustavo.neves@aluno.ufla.br
+Gustavo Costa – [@guhcostan](https://instagram.com/guhcostan) – gustavo.neves@aluno.ufla.br
 
 Distributed under the XYZ license. See ``LICENSE`` for more information.
 
 ## Contributing
 
-1. Fork it (<https://github.com/yourname/yourproject/fork>)
+1. Fork it (<https://github.com/guhcostan/projetoWeb/fork>)
 2. Create your feature branch (`git checkout -b feature/fooBar`)
 3. Commit your changes (`git commit -am 'Add some fooBar'`)
 4. Push to the branch (`git push origin feature/fooBar`)
