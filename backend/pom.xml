@@ -84,6 +84,36 @@
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
+			
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+			    </plugin>
+			    <plugin>
+				<artifactId>maven-resources-plugin</artifactId>
+				<executions>
+				    <execution>
+					<id>copy Vue.js frontend content</id>
+					<phase>generate-resources</phase>
+					<goals>
+					    <goal>copy-resources</goal>
+					</goals>
+					<configuration>
+					    <outputDirectory>src/main/resources/public</outputDirectory>
+					    <overwrite>true</overwrite>
+					    <resources>
+						<resource>
+						    <directory>${project.build.directory}/../../frontend/dist</directory>
+						    <includes>
+							<include>/**</include>
+						    </includes>
+						</resource>
+					    </resources>
+					</configuration>
+				    </execution>
+				</executions>
+			    </plugin>
+
 
 			<!--Plugin de Code Coverage-->
 			<plugin>
