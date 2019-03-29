@@ -11,7 +11,11 @@ matrix:
       cache:
         directories:
         - node_modules
-
+     
+      before_script:
+        - cd backend
+      script: 
+        - cd ../backend
     - language: java
       jdk: oraclejdk8
       cache:
