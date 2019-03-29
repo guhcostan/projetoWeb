@@ -3,7 +3,7 @@ const production = process.env.NODE_ENV === 'production';
 
 module.exports = {
 
-    outputDir: '../backend/src/main/resources/public/',
+    outputDir: 'dist/',
     indexPath: './index.html',
     assetsDir:'static/',
     publicPath: production ? '/projetoweb' : '.',
