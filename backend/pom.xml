@@ -146,27 +146,6 @@
 				</executions>
 			</plugin>
 
-			<plugin>
-				<groupId>com.mycila</groupId>
-				<artifactId>license-maven-plugin</artifactId>
-				<version>2.11</version>
-				<configuration>
-					<header>com/mycila/maven/plugin/license/templates/APACHE-2.txt</header>
-					<properties>
-						<owner>Gustavo Costa Neves</owner>
-					</properties>
-					<skipExistingHeaders>true</skipExistingHeaders>
-				</configuration>
-				<executions>
-					<execution>
-						<id>install-format</id>
-						<phase>install</phase>
-						<goals>
-							<goal>format</goal>
-						</goals>
-					</execution>
-				</executions>
-			</plugin>
 		</plugins>
 	</build>
 
