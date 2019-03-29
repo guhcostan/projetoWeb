@@ -12,7 +12,7 @@ import java.util.List;
 public class ProfessorController {
 
     @Autowired
-    ProfessorService professorService;
+    private ProfessorService professorService;
 
     @Getter(name = "/professores")
     public List<Professor> getAll() {
