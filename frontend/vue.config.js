@@ -3,9 +3,9 @@ const production = process.env.NODE_ENV === 'production';
 
 module.exports = {
 
+    indexPath: path.resolve(__dirname, '../target/dist/index.html'),
+    assetsDir: path.resolve(__dirname, '../target/dist'),
     outputDir: 'dist/',
-    indexPath: './index.html',
-    assetsDir:'static/',
     publicPath: production ? '/projetoweb' : '.',
     runtimeCompiler: true,
 
