@@ -11,9 +11,9 @@ import java.util.List;
 public class ProfessorService {
 
     @Autowired
-    ProfessorRepositorie professorRepositorie;
+    private ProfessorRepositorie professorRepositorie;
 
-    public List<Professor> getAll(){
+    public List<Professor> getAll() {
         return professorRepositorie.findAll();
     }
 }

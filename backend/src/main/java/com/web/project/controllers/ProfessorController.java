@@ -15,7 +15,7 @@ public class ProfessorController {
     ProfessorService professorService;
 
     @Getter(name = "/professores")
-    public List<Professor> getAll(){
+    public List<Professor> getAll() {
 
         return professorService.getAll();
 
