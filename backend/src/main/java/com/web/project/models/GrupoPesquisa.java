@@ -10,7 +10,7 @@ import java.util.List;
 @Entity
 @NoArgsConstructor
 @Table(name = "grupos_pesquisa")
-public class GrupoPesquisa{
+public class GrupoPesquisa {
 
     List<Pessoa> membros;
 }

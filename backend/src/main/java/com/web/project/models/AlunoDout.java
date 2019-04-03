@@ -10,11 +10,11 @@ import javax.persistence.Table;
 @Entity
 @NoArgsConstructor
 @Table(name = "alunos")
-public class AlunoDout extends Aluno{
+public class AlunoDout extends Aluno {
 
     @Id
     private Long id;
 
     private String nome;
-    
+
 }
