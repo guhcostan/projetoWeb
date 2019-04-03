@@ -12,5 +12,5 @@ import java.util.List;
 @Table(name = "grupos_pesquisa")
 public class GrupoPesquisa {
 
-    List<Pessoa> membros;
+    private List<Pessoa> membros;
 }
