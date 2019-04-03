@@ -6,17 +6,16 @@ import lombok.NoArgsConstructor;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
-import java.util.List;
 
 @Entity
 @NoArgsConstructor
-@Table(name = "professores")
-public class Professor {
+@Table(name = "aulas")
+public class Aula {
 
-    private Pessoa pessoa;
+    @Id
+    private Long id;
 
-    private List<Aluno> alunos;
+    private String nome;
 
-    private Contato dadosContato;
 
 }

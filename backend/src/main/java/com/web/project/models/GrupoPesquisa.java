@@ -4,19 +4,13 @@ package com.web.project.models;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.Entity;
-import javax.persistence.Id;
 import javax.persistence.Table;
 import java.util.List;
 
 @Entity
 @NoArgsConstructor
-@Table(name = "professores")
-public class Professor {
+@Table(name = "grupos_pesquisa")
+public class GrupoPesquisa{
 
-    private Pessoa pessoa;
-
-    private List<Aluno> alunos;
-
-    private Contato dadosContato;
-
+    List<Pessoa> membros;
 }
