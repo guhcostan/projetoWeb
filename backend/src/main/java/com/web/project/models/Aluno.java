@@ -22,4 +22,8 @@ public class Aluno {
             {@JoinColumn(name = "grupo_id")})
     private List<GrupoPesquisa> gruposPesquisa;
 
+    public Aluno(String nome) {
+
+        this.nome = nome;
+    }
 }

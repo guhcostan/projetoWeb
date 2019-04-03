@@ -4,6 +4,7 @@ import com.web.project.models.Aluno;
 import com.web.project.services.AlunoService;
 import jdk.nashorn.internal.objects.annotations.Getter;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
@@ -18,6 +19,13 @@ public class AlunoController {
     public List<Aluno> getAll() {
 
         return alunoService.getAll();
+
+    }
+
+    @PostMapping(name = "/aluno")
+    public void createAluno(String nome) {
+
+        alunoService.criarAluno(nome);
 
     }
 }

@@ -16,4 +16,11 @@ public class AlunoService {
     public List<Aluno> getAll() {
         return alunoRepository.findAll();
     }
+
+    public void criarAluno(String nome) {
+
+        Aluno aluno = new Aluno(nome);
+
+        alunoRepository.save(aluno);
+    }
 }
