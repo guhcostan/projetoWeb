@@ -26,11 +26,11 @@ import static org.junit.Assert.assertEquals;
 @SpringBootTest
 public class ProjectApplicationTests {
 
-	@Test
-	public void contextLoads() {
+    @Test
+    public void contextLoads() {
 
-		String s = "sucesso";
-		assertEquals("sucesso", s);
-	}
+        String s = "sucesso";
+        assertEquals("sucesso", s);
+    }
 
 }

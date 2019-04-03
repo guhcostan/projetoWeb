@@ -4,6 +4,8 @@ package com.web.project.models;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.ManyToMany;
 import javax.persistence.Table;
 import java.util.List;
 
@@ -12,5 +14,10 @@ import java.util.List;
 @Table(name = "grupos_pesquisa")
 public class GrupoPesquisa {
 
-    private List<Pessoa> membros;
+    @Id
+    private Long id;
+
+    @ManyToMany(mappedBy = "gruposPesquisa")
+    private List<Aluno> membros;
+
 }

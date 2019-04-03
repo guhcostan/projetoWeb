@@ -1,7 +1,7 @@
 package com.web.project.controllers;
 
-import com.web.project.models.Professor;
-import com.web.project.services.ProfessorService;
+import com.web.project.models.Aluno;
+import com.web.project.services.AlunoService;
 import jdk.nashorn.internal.objects.annotations.Getter;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RestController;
@@ -9,15 +9,15 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.List;
 
 @RestController
-public class ProfessorController {
+public class AlunoController {
 
     @Autowired
-    private ProfessorService professorService;
+    private AlunoService alunoService;
 
-    @Getter(name = "/professores")
-    public List<Professor> getAll() {
+    @Getter(name = "/alunos")
+    public List<Aluno> getAll() {
 
-        return professorService.getAll();
+        return alunoService.getAll();
 
     }
 }
