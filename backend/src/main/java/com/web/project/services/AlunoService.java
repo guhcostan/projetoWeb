@@ -10,17 +10,19 @@ import java.util.List;
 @Service
 public class AlunoService {
 
-    @Autowired
-    private AlunoRepository alunoRepository;
+	@Autowired
+	private AlunoRepository alunoRepository;
 
-    public List<Aluno> getAll() {
-        return alunoRepository.findAll();
-    }
+	public List<Aluno> getAll() {
 
-    public void criarAluno(String nome) {
+		return alunoRepository.findAll();
+	}
 
-        Aluno aluno = new Aluno(nome);
+	public void criarAluno(String nome) {
 
-        alunoRepository.save(aluno);
-    }
+		Aluno aluno = new Aluno(nome);
+
+		alunoRepository.save(aluno);
+	}
+
 }

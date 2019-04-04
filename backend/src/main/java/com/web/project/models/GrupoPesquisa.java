@@ -16,11 +16,11 @@ import java.util.List;
 @Table(name = "grupos_pesquisa")
 public class GrupoPesquisa {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    private Long id;
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
+	private Long id;
 
-    @ManyToMany(mappedBy = "gruposPesquisa")
-    private List<Aluno> membros;
+	@ManyToMany(mappedBy = "gruposPesquisa")
+	private List<Aluno> membros;
 
 }

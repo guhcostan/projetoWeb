@@ -16,22 +16,22 @@ import java.time.LocalDate;
 @Table(name = "projetos_pesquisa")
 public class ProjetoPesquisa {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    private Long id;
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
+	private Long id;
 
-    private String nome;
+	private String nome;
 
-    private String resumo;
+	private String resumo;
 
-    private LocalDate anoInicio;
+	private LocalDate anoInicio;
 
-    private LocalDate anoTermino;
+	private LocalDate anoTermino;
 
-    private File arquivo;
+	private File arquivo;
 
-    private String dissertacao;
+	private String dissertacao;
 
-    private String tese;
+	private String tese;
 
 }

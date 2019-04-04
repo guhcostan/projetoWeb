@@ -14,12 +14,12 @@ import javax.persistence.Table;
 @Table(name = "aulas")
 public class Aula {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    private Long id;
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
+	private Long id;
 
-    private String nome;
+	private String nome;
 
-    private TipoAula tipo;
+	private TipoAula tipo;
 
 }

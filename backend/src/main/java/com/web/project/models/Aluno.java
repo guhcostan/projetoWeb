@@ -18,22 +18,23 @@ import java.util.List;
 @Table(name = "alunos")
 public class Aluno {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    private Long id;
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
+	private Long id;
 
-    private String nome;
+	private String nome;
 
-    @ManyToMany
-    @JoinTable(name = "rel_aluno_grupo_pesquisa", joinColumns =
-            {@JoinColumn(name = "aluno_id")}, inverseJoinColumns =
-            {@JoinColumn(name = "grupo_id")})
-    private List<GrupoPesquisa> gruposPesquisa;
+	@ManyToMany
+	@JoinTable(name = "rel_aluno_grupo_pesquisa", joinColumns =
+			{@JoinColumn(name = "aluno_id")}, inverseJoinColumns =
+			{@JoinColumn(name = "grupo_id")})
+	private List<GrupoPesquisa> gruposPesquisa;
 
-    private TipoAluno tipo;
+	private TipoAluno tipo;
 
-    public Aluno(String nome) {
+	public Aluno(String nome) {
 
-        this.nome = nome;
-    }
+		this.nome = nome;
+	}
+
 }

@@ -1,13 +1,14 @@
 const webpack = require('webpack');
-const development = process.env.NODE_ENV === 'development';
 const httpPath = process.env.VUE_APP_HTTP_PATH;
+const development = process.env.NODE_ENV === 'development';
 
 module.exports = {
 
     outputDir: '../backend/src/main/resources/public/',
-    assetsDir: 'static',
-    publicPath: development ? '/' : httpPath,
+    indexPath: './index.html',
+    publicPath: development ? '/' : httpPath ,
     runtimeCompiler: true,
+
 
     // configure webpack-dev-server behavior
     devServer: {
@@ -17,14 +18,13 @@ module.exports = {
         https: false,
         hotOnly: false,
         proxy: {
-            '/': {
-                target: 'http://localhost:9666',
-                changeOrigin: true,
-                ws: true
+            [httpPath]: {
+                target: 'http://localhost:9655/',
+                changeOrigin: false
             }
-        },
-
+        }
     },
+
 
     css: {
         loaderOptions: {
