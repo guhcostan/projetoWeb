@@ -7,6 +7,7 @@ CREATE TABLE alunos
 );
 ALTER TABLE alunos
     owner TO postgres;
+
 CREATE TABLE aulas
 (
     id   bigserial    NOT NULL
@@ -16,6 +17,7 @@ CREATE TABLE aulas
 );
 ALTER TABLE aulas
     owner TO postgres;
+
 CREATE TABLE contato
 (
     id       bigserial    NOT NULL
