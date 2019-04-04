@@ -1,12 +1,12 @@
 const webpack = require('webpack');
-const production = process.env.NODE_ENV === 'production';
+const development = process.env.NODE_ENV === 'development';
+const httpPath = process.env.VUE_APP_HTTP_PATH;
 
 module.exports = {
 
-    indexPath: 'target/dist/index.html',
-    outputDir: 'target/dist',
+    outputDir: '../backend/src/main/resources/public/',
     assetsDir: 'static',
-    publicPath: production ? '/projetoweb' : '.',
+    publicPath: development ? '/' : httpPath,
     runtimeCompiler: true,
 
     // configure webpack-dev-server behavior

@@ -12,20 +12,21 @@ import java.util.List;
 @RestController
 public class AlunoController {
 
-    @Autowired
-    private AlunoService alunoService;
+	@Autowired
+	private AlunoService alunoService;
 
-    @GetMapping(name = "/alunos")
-    public List<Aluno> getAll() {
+	@GetMapping(value = "/alunos")
+	public List<Aluno> getAll() {
 
-        return alunoService.getAll();
+		return alunoService.getAll();
 
-    }
+	}
 
-    @PostMapping(name = "/aluno")
-    public void createAluno(String nome) {
+	@PostMapping(value = "/aluno")
+	public void createAluno(String nome) {
 
-        alunoService.criarAluno(nome);
+		alunoService.criarAluno(nome);
 
-    }
+	}
+
 }

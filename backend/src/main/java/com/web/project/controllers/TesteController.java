@@ -23,11 +23,10 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class TesteController {
 
+	@GetMapping(value = "/teste")
+	public String pingTest() {
 
-    @GetMapping(value = "/teste")
-    public String pingTest() {
-
-        return "Sucesso";
-    }
+		return "Sucesso";
+	}
 
 }
