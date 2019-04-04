@@ -79,7 +79,6 @@
 
     <build>
         <plugins>
-
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
@@ -94,15 +93,13 @@
                             <goal>copy-resources</goal>
                         </goals>
                         <configuration>
-                            <outputDirectory>src/public</outputDirectory>
+                            <outputDirectory>src/main/resources/</outputDirectory>
                             <overwrite>true</overwrite>
                             <resources>
                                 <resource>
-                                    <directory>${project.basedir}../frontend/target/dist</directory>
+                                    <directory>${project.basedir}/../frontend/target</directory>
                                     <includes>
-                                        <include>static/</include>
-                                        <include>index.html</include>
-                                        <include>favicon.ico</include>
+                                        <include>public/</include>
                                     </includes>
                                 </resource>
                             </resources>
