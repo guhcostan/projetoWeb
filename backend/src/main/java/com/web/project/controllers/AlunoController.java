@@ -2,8 +2,8 @@ package com.web.project.controllers;
 
 import com.web.project.models.Aluno;
 import com.web.project.services.AlunoService;
-import jdk.nashorn.internal.objects.annotations.Getter;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -15,7 +15,7 @@ public class AlunoController {
     @Autowired
     private AlunoService alunoService;
 
-    @Getter(name = "/alunos")
+    @GetMapping(name = "/alunos")
     public List<Aluno> getAll() {
 
         return alunoService.getAll();
