@@ -3,6 +3,7 @@
         h1 Formulario de {{tipo}}
         el-input(label="Nome")
         el-input(label="Cpf")
+        el-input(label="Sobrenome")
         el-button Cadastrar aluno
 </template>
 
