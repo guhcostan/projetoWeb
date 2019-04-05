@@ -2,7 +2,6 @@ package com.web.project.models;
 
 
 import lombok.AllArgsConstructor;
-import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.Entity;
@@ -18,7 +17,6 @@ import java.util.List;
 
 @Entity
 @NoArgsConstructor
-@Data
 @AllArgsConstructor
 @Table(name = "alunos")
 public class Aluno {
