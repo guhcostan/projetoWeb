@@ -27,4 +27,8 @@ public class ProjectApplicationTests {
 	@Autowired
 	public DatabaseCleaner databaseCleaner;
 
+	@Test
+	public void contextLoads() {
+	
+	}
 }
