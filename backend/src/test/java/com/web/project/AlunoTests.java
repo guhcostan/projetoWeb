@@ -19,6 +19,8 @@ public class AlunoTests extends ProjectApplicationTests {
 	@Before
 	public void setUp() {
 
+		databaseCleaner.cleanAll();
+
 		this.mockMvc = MockMvcBuilders.standaloneSetup(alunoController).build();
 	}
 
@@ -38,6 +40,9 @@ public class AlunoTests extends ProjectApplicationTests {
 	@Test
 	public void deletaAluno() throws Exception {
 
+		databaseCleaner.cleanAll();
+
+		alunoController.createAluno("Gustavo", "12312312312", "DOUTORADO");
 		this.mockMvc.perform(MockMvcRequestBuilders.delete("/deletaAluno").param("cpf", "12312312312")).andExpect(MockMvcResultMatchers.status().isOk());
 	}
 
