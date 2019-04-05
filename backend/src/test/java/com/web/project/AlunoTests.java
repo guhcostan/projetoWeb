@@ -41,14 +41,4 @@ public class AlunoTests extends ProjectApplicationTests {
 		this.mockMvc.perform(MockMvcRequestBuilders.delete("/deletaAluno").param("cpf", "12312312312")).andExpect(MockMvcResultMatchers.status().isOk());
 	}
 
-	@Test
-	public void deletaAlunoInexistente() throws Exception {
-
-		try {
-			this.mockMvc.perform(MockMvcRequestBuilders.delete("/deletaAluno").param("cpf", "1231231112"));
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
-	}
-
 }
