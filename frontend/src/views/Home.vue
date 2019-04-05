@@ -1,16 +1,16 @@
 <template lang="pug">
   #home
-    HelloWorld
+    formulario-aluno(tipo="aluno")
 </template>
 
 <script>
 // @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
+import FormularioAluno from "../components/FormularioAluno";
 
 export default {
   name: 'home',
   components: {
-    HelloWorld
+      FormularioAluno,
   }
 }
 </script>

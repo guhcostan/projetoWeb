@@ -1,6 +1,5 @@
 <template lang="pug">
-    #header
-        el-header Header
+    el-header#header Header
 </template>
 
 <script>
@@ -12,7 +11,7 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
-    .el-header{
+    .el-header, .el-footer {
         background-color: #B3C0D1;
         color: #333;
         text-align: center;

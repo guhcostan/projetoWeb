@@ -1,6 +1,5 @@
 <template lang="pug">
-    #footer
-        el-footer Footer
+    el-footer#footer Footer
 </template>
 
 <script>

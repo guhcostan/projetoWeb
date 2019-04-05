@@ -11,6 +11,11 @@ export default new Router({
       path: '/',
       name: 'home',
       component: () => import('./views/Home.vue')
+    },
+    {
+      path: '/2',
+      name: 'otherRoute',
+      component: () => import('./views/OtherRoute.vue')
     }
   ]
 })

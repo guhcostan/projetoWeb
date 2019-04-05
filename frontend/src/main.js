@@ -4,6 +4,7 @@ import router from './router'
 import store from './store'
 
 import 'jquery/dist/jquery.min.js';
+import 'element-ui/lib/theme-chalk/index.css';
 import 'blockui/jquery.blockui.min';
 import '@/styles/main.scss';
 

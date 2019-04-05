@@ -1,10 +1,9 @@
 <template lang="pug">
-  #app
-    el-container
-      AppHeader
-      .view
-        router-view
-      AppFooter
+el-container#app.is-vertical
+  AppHeader
+  el-main
+    router-view
+  AppFooter
 </template>
 
 <script>
@@ -18,8 +17,8 @@
 
 <style lang="scss">
   #app{
-    .view{
-      width: 100%;
-    }
+      background-color: #E9EEF3;
+      color: #333;
+      text-align: center;
   }
 </style>
