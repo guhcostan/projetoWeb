@@ -25,9 +25,9 @@ public class AlunoController {
 	}
 
 	@PostMapping(value = "/cadastrarAluno")
-	public void createAluno(String nome, String cpf, TipoAluno tipoAluno) {
+	public void createAluno(String nome, String cpf, String tipoAluno) {
 
-		alunoService.criarAluno(nome, cpf, tipoAluno);
+		alunoService.criarAluno(nome, cpf, TipoAluno.valueOf(tipoAluno));
 
 	}
 
@@ -39,7 +39,7 @@ public class AlunoController {
 	}
 
 	@DeleteMapping(value = "/deletaAluno")
-	public void deletaAluno(String cpf) {
+	public void deletaAluno(String cpf) throws Exception {
 
 		alunoService.deletar(cpf);
 

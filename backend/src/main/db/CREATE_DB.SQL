@@ -3,6 +3,7 @@ CREATE TABLE alunos
     id   bigserial    NOT NULL
         CONSTRAINT alunos_pkey PRIMARY key,
     nome VARCHAR(255) NOT NULL,
+    cpf  VARCHAR(255) NOT NULL,
     tipo INTEGER      NOT NULL
 );
 ALTER TABLE alunos

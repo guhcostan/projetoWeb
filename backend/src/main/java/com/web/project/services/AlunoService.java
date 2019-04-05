@@ -29,6 +29,7 @@ public class AlunoService {
 		Aluno aluno = new Aluno(nome, cpf, tipoAluno);
 
 		alunoRepository.save(aluno);
+
 	}
 
 	public void vincularProjetoAluno(String cpfAluno, Long idProjeto) {
@@ -41,12 +42,15 @@ public class AlunoService {
 
 	}
 
-	public void deletar(String cpf) {
+	public void deletar(String cpf) throws Exception {
 
 		Optional<Aluno> aluno = alunoRepository.findByCpf(cpf);
 
-		aluno.ifPresent(value -> alunoRepository.delete(value));
+		if (!aluno.isPresent()) {
+			throw new Exception("Aluno não encontrado");
+		}
 
+		alunoRepository.delete(aluno.get());
 	}
 
 }
