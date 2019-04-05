@@ -24,9 +24,9 @@ public class AlunoService {
 		return alunoRepository.findAll();
 	}
 
-	public void criarAluno(String nome, TipoAluno tipoAluno) {
+	public void criarAluno(String nome, String cpf, TipoAluno tipoAluno) {
 
-		Aluno aluno = new Aluno(nome, tipoAluno);
+		Aluno aluno = new Aluno(nome, cpf, tipoAluno);
 
 		alunoRepository.save(aluno);
 	}
@@ -37,11 +37,7 @@ public class AlunoService {
 
 		Optional<ProjetoPesquisa> projetoPesquisa = projetoPesquisaService.findById(idProjeto);
 
-		if (projetoPesquisa.isPresent()) {
-
-			aluno.ifPresent(value -> value.addProjeto(projetoPesquisa));
-
-		}
+		projetoPesquisa.ifPresent(pesquisa -> aluno.ifPresent(value -> value.addProjeto(pesquisa)));
 
 	}
 

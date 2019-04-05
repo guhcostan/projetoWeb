@@ -25,9 +25,9 @@ public class AlunoController {
 	}
 
 	@PostMapping(value = "/cadastrarAluno")
-	public void createAluno(String nome, TipoAluno tipoAluno) {
+	public void createAluno(String nome, String cpf, TipoAluno tipoAluno) {
 
-		alunoService.criarAluno(nome, tipoAluno);
+		alunoService.criarAluno(nome, cpf, tipoAluno);
 
 	}
 
