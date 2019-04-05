@@ -1,6 +1,8 @@
 package com.web.project.models;
 
 
+import lombok.AllArgsConstructor;
+import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.Entity;
@@ -12,9 +14,12 @@ import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
 import javax.persistence.Table;
 import java.util.List;
+import java.util.Optional;
 
 @Entity
 @NoArgsConstructor
+@Data
+@AllArgsConstructor
 @Table(name = "alunos")
 public class Aluno {
 
@@ -30,11 +35,20 @@ public class Aluno {
 			{@JoinColumn(name = "grupo_id")})
 	private List<GrupoPesquisa> gruposPesquisa;
 
+	private List<Optional<ProjetoPesquisa>> projetoPesquisas;
+
 	private TipoAluno tipo;
 
-	public Aluno(String nome) {
+	public Aluno(String nome, TipoAluno doutorado) {
 
 		this.nome = nome;
+		this.tipo = doutorado;
+
+	}
+
+	public void addProjeto(Optional<ProjetoPesquisa> projetoPesquisa) {
+
+		this.projetoPesquisas.add(projetoPesquisa);
 	}
 
 }

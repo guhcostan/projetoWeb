@@ -1,8 +1,10 @@
 package com.web.project.controllers;
 
 import com.web.project.models.Aluno;
+import com.web.project.models.TipoAluno;
 import com.web.project.services.AlunoService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -22,10 +24,24 @@ public class AlunoController {
 
 	}
 
-	@PostMapping(value = "/aluno")
-	public void createAluno(String nome) {
+	@PostMapping(value = "/cadastrarAluno")
+	public void createAluno(String nome, TipoAluno tipoAluno) {
 
-		alunoService.criarAluno(nome);
+		alunoService.criarAluno(nome, tipoAluno);
+
+	}
+
+	@PostMapping(value = "/adicionarProjetoAluno")
+	public void adicionarProjetoAluno(String cpfAluno, Long idProjeto) {
+
+		alunoService.vincularProjetoAluno(cpfAluno, idProjeto);
+
+	}
+
+	@DeleteMapping(value = "/deletaAluno")
+	public void deletaAluno(String cpf) {
+
+		alunoService.deletar(cpf);
 
 	}
 
