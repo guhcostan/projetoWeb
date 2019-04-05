@@ -9,6 +9,7 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;
+import java.util.logging.Logger;
 
 @Service
 public class AlunoService {
@@ -47,10 +48,11 @@ public class AlunoService {
 		Optional<Aluno> aluno = alunoRepository.findByCpf(cpf);
 
 		if (!aluno.isPresent()) {
-			throw new Exception("Aluno não encontrado");
+			//throw new Exception("Aluno não encontrado");
+			Logger.getGlobal().warning("Aluno não encontrado");
+		} else {
+			alunoRepository.delete(aluno.get());
 		}
-
-		alunoRepository.delete(aluno.get());
 	}
 
 }

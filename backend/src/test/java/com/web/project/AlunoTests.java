@@ -43,7 +43,27 @@ public class AlunoTests extends ProjectApplicationTests {
 		databaseCleaner.cleanAll();
 
 		alunoController.createAluno("Gustavo", "12312312312", "DOUTORADO");
+
 		this.mockMvc.perform(MockMvcRequestBuilders.delete("/deletaAluno").param("cpf", "12312312312")).andExpect(MockMvcResultMatchers.status().isOk());
+	}
+
+	@Test
+	public void deletaAlunoInexistente() throws Exception {
+
+		databaseCleaner.cleanAll();
+
+		this.mockMvc.perform(MockMvcRequestBuilders.delete("/deletaAluno").param("cpf", "12312312312")).andExpect(MockMvcResultMatchers.status().isOk());
+	}
+
+	@Test
+	public void vinculaAlunoProjeto() throws Exception {
+
+		databaseCleaner.cleanAll();
+
+		alunoController.createAluno("Gustavo", "12312312312", "DOUTORADO");
+
+		this.mockMvc.perform(MockMvcRequestBuilders.post("/adicionarProjetoAluno").param("cpfAluno", "12312312312").param("idProjeto", "1")).andExpect(MockMvcResultMatchers.status().isOk());
+
 	}
 
 }
