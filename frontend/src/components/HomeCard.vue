@@ -1,13 +1,15 @@
 <template>
     <div class="home-card"> 
-        <img :src="home.icon"/>
+        <img :src="urlIcon"/>
     </div>
 </template>
 
 <script>
 export default {
     name: 'homeCard',
-    props: ['icon']
+    props: {
+        urlIcon: String
+    }
 }
 </script>
 
