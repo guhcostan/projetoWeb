@@ -18,7 +18,7 @@ export default {
         display: flex;
         justify-content: center;
         flex-direction: column;
-        height: 60px;
+        height: 80px;
         border-top: #35495E solid 2px;
         color: #35495E;
         text-align: center;

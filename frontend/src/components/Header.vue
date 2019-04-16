@@ -20,6 +20,7 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
     .el-header{
+        height: 12vh;
         background-color: #35495E;
         color: #D0D3D6;
         font-size: 2em;
@@ -27,11 +28,10 @@ export default {
         align-items: center;
         box-shadow: 0 5px 5px rgba($color: #000000, $alpha: 0.5);
         .logo {
-            width: 200px;
+            width: 14rem;
             img {
                 padding: 30px 40px;
-                width: 50%; 
-                height: 100%;              
+                width: 38%; 
             }
         }
     }
