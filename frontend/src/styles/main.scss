@@ -2,6 +2,10 @@
 @import 'loading.scss';
 @import 'mixins.scss';
 
+*{
+  margin: 0;
+  padding: 0;
+}
 
 html {
   font-size: map-get($font-size, default);
