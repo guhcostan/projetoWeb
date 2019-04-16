@@ -1,6 +1,8 @@
-<template lang="pug">
-    #footer
-        el-footer Footer
+<template >
+    <div class="el-footer">
+        <p>Universidade Federal e Lavras</p>
+        <p>Departamento de Ciência da Computação</p>
+    </div>
 </template>
 
 <script>
@@ -13,9 +15,12 @@ export default {
 <style scoped lang="scss">
 
     .el-footer{
-        background-color: #B3C0D1;
-        color: #333;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        height: 60px;
+        border-top: #35495E solid 2px;
+        color: #35495E;
         text-align: center;
-        line-height: 60px;
     }
 </style>
