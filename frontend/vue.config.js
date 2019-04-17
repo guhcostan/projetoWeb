@@ -1,6 +1,7 @@
 const webpack = require('webpack');
 const httpPath = process.env.VUE_APP_HTTP_PATH;
 const development = process.env.NODE_ENV === 'development';
+const path = require('path');
 
 module.exports = {
 
@@ -30,7 +31,7 @@ module.exports = {
         loaderOptions: {
             sass: {
                 data: `
-   
+                   @import "@/styles/variables.scss";
         `
             }
         }
@@ -40,8 +41,20 @@ module.exports = {
         plugins: [
             new webpack.ProvidePlugin({
                 '$': 'jquery',
-                jQuery: 'jquery'
+                jQuery: 'jquery',
             })
-        ]
+        ],
+        module: {
+            rules: [
+                {
+                    test: /\.(woff2?|eot|ttf|otf)(\?.*)?$/,
+                    loader: 'url-loader',
+                    query: {
+                        limit: 10000,
+                        name: path.resolve(__dirname, 'fonts/[name].[hash:7].[ext]')
+                    }
+                }
+            ]
+        }
     }
 };
