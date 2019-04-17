@@ -50,7 +50,7 @@ mvn clean package
 
 ## Prototype
 
-http://marvelapp.com/46g4a4d/screen/55798846
+https://marvelapp.com/46g4a4d
 
 ## Meta
 
