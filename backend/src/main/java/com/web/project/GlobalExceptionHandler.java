@@ -37,8 +37,9 @@ public class GlobalExceptionHandler extends ResponseEntityExceptionHandler {
 	}
 
 	@Override
-	protected ResponseEntity<Object> handleExceptionInternal(Exception ex, Object body, HttpHeaders headers,
-															 HttpStatus status, WebRequest request) {
+	protected ResponseEntity<Object> handleExceptionInternal(Exception ex,
+															 Object body, HttpHeaders headers, HttpStatus status,
+															 WebRequest request) {
 
 		logger.error(ex.getLocalizedMessage(), ex);
 
