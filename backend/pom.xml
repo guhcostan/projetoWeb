@@ -97,7 +97,7 @@
                             <overwrite>true</overwrite>
                             <resources>
                                 <resource>
-                                    <directory>${project.basedir}/../frontend/target/dist</directory>
+                                    <directory>${project.basedir}/../frontend/target/public</directory>
                                     <includes>
                                         <include>static/</include>
                                         <include>index.html</include>
