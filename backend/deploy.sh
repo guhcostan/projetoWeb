@@ -1,3 +1,5 @@
 heroku plugins:install java
 
-heroku deploy:jar ./target/project-0.0.1-SNAPSHOT.jar --app seisvue
+./mvnw package
+
+heroku deploy:jar target/project-0.0.1-SNAPSHOT.jar --app seisvue
