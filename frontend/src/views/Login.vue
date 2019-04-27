@@ -1,16 +1,20 @@
 <template>
-    <div>
+    <el-container class="container">
         <h1>Login</h1>
         <p>Lorem Ipsum</p>
-    </div>
+    </el-container>
 </template>
 
 <script>
 export default {
-    name: "Contact"
+    name: "Login"
 }
 </script>
 
 <style lang="scss">
-
+    .container {
+        background-color: #E4E6E9;
+        height: 75vh;
+        color: #112A37;
+    }
 </style>
