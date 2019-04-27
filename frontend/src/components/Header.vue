@@ -1,5 +1,5 @@
 <template lang="html">
-    <header class="el-header">
+    <header class="header">
         <router-link to="/" class="logo"><img src="../assets/logo_GA.png"></router-link>
         <nav class="navbar">
             <router-link to="/">Home</router-link>
@@ -19,7 +19,7 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
-    .el-header{
+    .header{
         height: 15vh;
         background-color: #112A37;
         color: #D6D6D6;

@@ -1,5 +1,5 @@
 <template >
-    <div class="el-footer">
+    <div class="footer">
         <p>Universidade Federal e Lavras</p>
         <p>Departamento de Ciência da Computação</p>
     </div>
@@ -14,7 +14,7 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
 
-    .el-footer{
+    .footer{
         display: flex;
         justify-content: center;
         flex-direction: column;

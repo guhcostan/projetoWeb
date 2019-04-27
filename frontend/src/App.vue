@@ -1,6 +1,6 @@
 <template lang="pug">
   #app
-    el-container
+    div
       AppHeader
       .view
         router-view
