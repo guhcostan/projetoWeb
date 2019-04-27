@@ -18,9 +18,13 @@ export default {
         display: flex;
         justify-content: center;
         flex-direction: column;
-        height: 80px;
-        border-top: #35495E solid 2px;
-        color: #35495E;
-        text-align: center;
+        align-items: center;
+        height: 9.8vh;
+        border-top: #112A37 solid 2px;
+        color: #112A37;
+        background-color: #D6D6D6;
+        p {
+            margin: 0;
+        }
     }
 </style>
