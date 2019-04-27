@@ -19,6 +19,24 @@
   <img src="https://github.com/guhcostan/projetoWeb/blob/master/frontend/logo.png?raw=true">
 </p>
 
+## Tecnologias
+
+### Backend
+    - Spring Boot
+    - Hibernate
+    - Lombok
+    - PostgreSQL
+    - JUnit
+    
+### Frontend
+    - Vuejs
+    - Element UI
+    
+### Motivação para escolhas de tecnologias
+    
+Foram escolhidas as tecnologias acima tendo em vista ao que nos foi apresentado durante a disciplina.
+O uso de algumas ferramentas foram escolhidas baseadas em experiência própria, pela praticidade e eficiência das mesmas.
+
 ## Instalação
 
 OS X & Linux:
@@ -30,10 +48,6 @@ npm run serve
 cd ../backend
 mvn spring-boot:run
 ```
-
-## Exemplo de uso
-
---TO DO
 
 ## Deploy
 
@@ -48,6 +62,9 @@ mvn clean package
 ## Release History
 
 
+## Prototype
+
+https://marvelapp.com/46g4a4d
 
 ## Meta
 

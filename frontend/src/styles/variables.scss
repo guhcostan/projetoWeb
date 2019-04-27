@@ -3,7 +3,7 @@
 /* -------------------------------------------------------- */
 
 /* Cores do tema do sistema */
-$primary:       #38598b !default;
+$primary: #122937 !default;
 $secondary:     #113f67 !default;
 $success:       #66BB6A !default;
 $info:          #17a2b8 !default;
@@ -13,8 +13,9 @@ $light:         #efefef !default;
 $dark:          #353B48 !default;
 
 // Background
-$default-background-color:							#F5F5F5;
-$selected-background-color:							#FAFAFA;
+$default-background-color: #E4E5E7;
+$secondary-background-color: #F4F4F4;
+$selected-background-color: #F4F4F4;
 
 // Bordas
 $default-border-color:								#DCDFE6;
@@ -37,18 +38,18 @@ $algodao-color:								#FFFFFF;
 
 $header-height: 70px;
 
-/* Para utilizar o font-size:::: =  map-get($font-size, tamanho-que-desejar) */
+/* Para utilizar o fonts-size:::: =  map-get($fonts-size, tamanho-que-desejar) */
 $font-size: (
-	xx-small:			 10px,
-	x-small:        	 12px,
-	small:               13px,
-	default:             14px,
-	medium:              15px,
-	big:                 16px,
-	bigger:              18px,
-	large:               20px,
-	x-large:             24px,
-	xx-large:            36px
+				xx-small:			 10px,
+				x-small:        	 12px,
+				small:               13px,
+				default:             14px,
+				medium:              15px,
+				big:                 16px,
+				bigger:              18px,
+				large:               20px,
+				x-large:             24px,
+				xx-large:            36px
 );
 
 $font-size-icon: (
@@ -72,8 +73,8 @@ $font-size-icon-small: (
 );
 
 $font-weight: (
-	normal:            normal,
-	medium:             500
+				normal:            normal,
+				medium:             500
 );
 
 
@@ -135,3 +136,11 @@ $menu-lateral-box-btn-radius: 4px;
 $menu-lateral-box-view-width: 400px;
 $menu-lateral-box-buttons-bar-width: $menu-lateral-box-btn-width;
 $footer-height: 75px;
+
+@font-face {
+	font-family: 'Pantom';
+	src:  url('/assets/fonts/PantonDemo-Black.otf') format('oft'),
+	url('/assets/fonts/PantonDemo-Light.otf') format('oft');
+	font-weight: bold;
+	font-style: normal;
+}
