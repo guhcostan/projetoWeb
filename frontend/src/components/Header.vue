@@ -20,36 +20,36 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
     .el-header{
-        height: 12vh;
-        background-color: #35495E;
-        color: #D0D3D6;
-        font-size: 2em;
+        height: 15vh;
+        background-color: #112A37;
+        color: #D6D6D6;
+        font-size: 1.8em;
+        font-weight: 400; 
         display: flex;
         align-items: center;
         box-shadow: 0 5px 5px rgba($color: #000000, $alpha: 0.5);
         .logo {
-            width: 14rem;
+            padding: 2rem 3.2rem;
             img {
-                padding: 30px 40px;
-                width: 38%; 
+                width: 6rem; 
             }
         }
     }
     .navbar {
         a {
             padding: 1rem;
+            margin: 0.8rem 1.72rem;
             text-decoration: none;
-            color: #D0D3D6;
+            color: #D6D6D6;
         }
     }
     .login-btn {
           margin-left: auto;
           margin-right: 5rem;
           text-decoration: none;
-          color: #D0D3D6;
-          background-color: #41B883;
-          padding: 8px;
-          border-radius: 10px;
-          border: #D0D3D6 solid 2px;
+          color: #D6D6D6;
+          background-color: #63C3A8;
+          padding: 1rem 2.6rem;
+          font-size: 0.8em;
     }
 </style>
