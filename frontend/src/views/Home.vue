@@ -1,23 +1,26 @@
 <template>
   <div id="home" class="container">
-    <HomeCard v-for="icon in homeIcons" :icon="icon.src"></HomeCard>
+    <h1 class="title">Gestão de atividades</h1>
+    <h2 class="professor">Professor Rafael Durelli</h2>
+    <div class="cardContainer">
+      <HomeCard v-for="card in homeCards" :key="card.id" :urlIcon="card.src" :title="card.title"></HomeCard>
+    </div>
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
 import HomeCard from '@/components/HomeCard.vue'
 
 export default {
   name: 'home',
   data: function() {
     return {
-      homeIcons: [
-        { id: 0, src: "../assests/folder-cinza.png" },
-        { id: 1, src: "img/lab-cinza.png" },
-        { id: 2, src: "img/document-cinza.png" },
-        { id: 3, src: "img/edit-cinza.png" }
+      homeCards: [
+        { id: 0, src: "folder-cinza.png", title: "Projetos" },
+        { id: 1, src: "lab-cinza.png", title: "Grupo de Pesquisa" },
+        { id: 2, src: "document-cinza.png", title: "Publicações" },
+        { id: 3, src: "edit-cinza.png", title: "Disciplinas" }
       ]
     }
   },
@@ -31,9 +34,24 @@ export default {
   .container {
     display: flex;
     justify-content: center;
-    align-items: center;
+    flex-direction: column;
+    background-color: #E4E6E9;
     height: 75vh;
-    background-color: #f4f4f4;
+    color: #112A37;
+    .title {
+      text-align: center;
+      font-weight: bolder;
+      font-size: 3rem;
+    }
+    .professor {
+      text-align: center;
+    }
+  }
+  .cardContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 5rem 0;
   }
 </style>
 
