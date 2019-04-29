@@ -3,6 +3,7 @@ package com.web.project.controllers;
 import com.web.project.models.Aluno;
 import com.web.project.models.TipoAluno;
 import com.web.project.services.AlunoService;
+import javassist.NotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -39,7 +40,7 @@ public class AlunoController {
 	}
 
 	@DeleteMapping(value = "/deletaAluno")
-	public void deletaAluno(String cpf) throws Exception {
+	public void deletaAluno(String cpf) throws NotFoundException {
 
 		alunoService.deletar(cpf);
 

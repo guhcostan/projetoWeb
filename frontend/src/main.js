@@ -6,6 +6,7 @@ import store from './store'
 import 'jquery/dist/jquery.min.js';
 import 'element-ui/lib/theme-chalk/index.css';
 import 'blockui/jquery.blockui.min';
+import 'element-ui/lib/theme-chalk/index.css';
 import '@/styles/main.scss';
 
 import ElementUI from 'element-ui';

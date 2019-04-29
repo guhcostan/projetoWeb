@@ -1,6 +1,7 @@
 package com.web.project;
 
 import com.web.project.controllers.AlunoController;
+import javassist.NotFoundException;
 import org.junit.Before;
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -8,6 +9,8 @@ import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
 import org.springframework.test.web.servlet.result.MockMvcResultMatchers;
 import org.springframework.test.web.servlet.setup.MockMvcBuilders;
+
+import static org.assertj.core.api.Assertions.assertThatThrownBy;
 
 public class AlunoTests extends ProjectApplicationTests {
 
@@ -48,11 +51,12 @@ public class AlunoTests extends ProjectApplicationTests {
 	}
 
 	@Test
-	public void deletaAlunoInexistente() throws Exception {
+	public void deletaAlunoInexistente() {
 
 		databaseCleaner.cleanAll();
 
-		this.mockMvc.perform(MockMvcRequestBuilders.delete("/deletaAluno").param("cpf", "12312312312")).andExpect(MockMvcResultMatchers.status().isOk());
+		assertThatThrownBy(() -> this.mockMvc.perform(MockMvcRequestBuilders.delete(
+				"/deletaAluno").param("cpf", "12312312312")).andExpect(MockMvcResultMatchers.status().isNotFound())).hasCause(new NotFoundException("Aluno não encontrado"));
 	}
 
 	@Test
