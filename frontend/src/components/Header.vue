@@ -37,6 +37,7 @@ export default {
     }
     .navbar {
         a {
+            font-weight: lighter;
             padding: 1rem;
             margin: 0.8rem 1.72rem;
             text-decoration: none;
