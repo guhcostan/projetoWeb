@@ -13,9 +13,19 @@ export default new Router({
       component: () => import('./views/Home.vue')
     },
     {
-      path: '/2',
-      name: 'otherRoute',
-      component: () => import('./views/OtherRoute.vue')
+      path: '/about',
+      name: 'about',
+      component: () => import('./views/About.vue')
+    },
+    {
+      path: '/contact',
+      name: 'contact',
+      component: () => import('./views/Contact.vue')
+    },
+    {
+      path: '/login',
+      name: 'login',
+      component: () => import('./views/Login.vue')
     }
   ]
 })
