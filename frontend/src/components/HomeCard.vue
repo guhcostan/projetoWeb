@@ -1,7 +1,7 @@
 <template>
     <router-link to="/" class="home-card">
         <div> 
-            <img :src="require(`@/assets/${urlIcon}`)"/>
+            <img :src="require(`@/assets/icons/${urlIcon}`)"/>
         </div>
         <h3>{{title}}</h3>
     </router-link>
@@ -35,7 +35,7 @@ export default {
                 top: 50%;
                 left: 50%;
                 transform: translate(-50%, -50%);
-                width: 7rem; 
+                width: 5.4rem; 
                 margin: auto;
             }
         }
