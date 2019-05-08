@@ -26,7 +26,8 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.web</groupId>
-    <artifactId>project</artifactId>
+    <artifactId>backend</artifactId>
+    <packaging>jar</packaging>
     <version>0.0.1-SNAPSHOT</version>
     <name>project</name>
     <description>Demo project for Spring Boot</description>
