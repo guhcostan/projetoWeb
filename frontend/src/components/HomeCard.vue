@@ -12,7 +12,8 @@ export default {
     name: 'homeCard',
     props: {
         urlIcon: String,
-        title: String
+        title: String,
+        urlRoute: String
     },
 }
 </script>
