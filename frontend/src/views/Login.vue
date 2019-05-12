@@ -55,9 +55,9 @@ export default {
                 border-radius: 10px;
                 padding: 3rem;
                 ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
-                color: grey;
-                opacity: 1; /* Firefox */
-                text-transform: uppercase;
+                    color: grey;
+                    opacity: 1; /* Firefox */
+                    text-transform: uppercase;
                 }
                 h1 {
                     margin-bottom: 2rem;
