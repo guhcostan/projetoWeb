@@ -3,10 +3,10 @@
         <router-link to="/" class="logo"><img src="../assets/logo_GA.png"></router-link>
         <nav class="navbar">
             <router-link to="/">Home</router-link>
-            <router-link to="about">Sobre</router-link>
-            <router-link to="contact">Contato</router-link>
+            <router-link to="/about">Sobre</router-link>
+            <router-link to="/contact">Contato</router-link>
         </nav>
-        <router-link to="login" class="login-btn">Login</router-link>
+        <router-link to="/login" class="login-btn">Login</router-link>
     </header>
 </template>
 
