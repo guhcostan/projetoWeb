@@ -5,6 +5,6 @@ import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface ProjetoPesquisaRepository extends JpaRepository<ProjetoPesquisa, Long> {
 
-	ProjetoPesquisa findByNome(String nomeProjeto);
+    ProjetoPesquisa findByNome(String nomeProjeto);
 
 }

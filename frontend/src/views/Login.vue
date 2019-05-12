@@ -31,11 +31,6 @@ export default {
                 password: ''
             }
         }
-    },
-    methods: {
-      onSubmit() {
-        console.log('submit!');
-      }
     }
 }
 </script>
@@ -77,5 +72,6 @@ export default {
             }
 
         }
+
     }
 </style>

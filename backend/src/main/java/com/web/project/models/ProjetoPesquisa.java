@@ -3,13 +3,7 @@ package com.web.project.models;
 
 import lombok.NoArgsConstructor;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
-import javax.persistence.Table;
+import javax.persistence.*;
 import java.io.File;
 import java.time.LocalDate;
 
@@ -18,26 +12,26 @@ import java.time.LocalDate;
 @Table(name = "projetos_pesquisa")
 public class ProjetoPesquisa {
 
-	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Long id;
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
 
-	private String nome;
+    private String nome;
 
-	private String resumo;
+    private String resumo;
 
-	private LocalDate anoInicio;
+    private LocalDate anoInicio;
 
-	private LocalDate anoTermino;
+    private LocalDate anoTermino;
 
-	private File arquivo;
+    private File arquivo;
 
-	private String dissertacao;
+    private String dissertacao;
 
-	private String tese;
+    private String tese;
 
-	@ManyToOne
-	@JoinColumn(name = "id_aluno", nullable = false)
-	private Aluno pesquisador;
+    @ManyToOne
+    @JoinColumn(name = "id_aluno", nullable = false)
+    private Aluno pesquisador;
 
 }
