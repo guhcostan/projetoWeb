@@ -12,7 +12,7 @@
                             <el-input type="password" v-model="loginForm.password" placeholder="************" suffix-icon="el-icon-lock"></el-input>
                         </el-form-item>
                         <el-form-item>
-                            <el-button class="login-btn" @click="$router.push('dashboard')">Entrar</el-button>
+                            <el-button class="login-btn" @click="login()">Entrar</el-button>
                         </el-form-item>
                     </el-form>
                 </div>
@@ -30,6 +30,12 @@ export default {
                 name: '',
                 password: ''
             }
+        }
+    },
+    methods: {
+        login() {
+            this.$root.$emit('is-logged');
+            this.$router.push('/dashboard');
         }
     }
 }
