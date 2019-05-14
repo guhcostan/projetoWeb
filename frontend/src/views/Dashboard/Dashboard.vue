@@ -1,6 +1,5 @@
 <template>
     <el-container>
-        <SideBar></SideBar>
         <!-- <el-breadcrumb class="breadcrumb" separator="/">
             <el-breadcrumb-item :to="{ path: '/' }">homepage</el-breadcrumb-item>
             <el-breadcrumb-item><a href="/">promotion management</a></el-breadcrumb-item>
@@ -11,13 +10,8 @@
 </template>
 
 <script>
-import SideBar from '@/components/SideBar.vue'
-
 export default {
-    name: "Dashboard",
-    components: {
-        SideBar
-    }
+    name: "Dashboard"
 }
 </script>
 

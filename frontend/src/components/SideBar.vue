@@ -1,19 +1,23 @@
 <template>
-    <el-menu
-        background-color="#112A37"
-        text-color="#4F5B68"
-        active-text-color="#63C3A8"
-        default-active="0"
-        :router="true">
-        <el-row class="logo" type="flex" justify="center" align="middle">
-            <el-col :span="19">
-                <img src="../assets/logo_GA.png" alt="Logo Gestão de Atividades">
-            </el-col>
-        </el-row>
-        <el-menu-item class="sidebar-item" v-for="item in sidebarItems" :key="item.id" :index="item.id.toString()" :route="item.urlRoute">
-            <SidebarItem :urlIcon="item.src" :title="item.title"></SidebarItem>
-        </el-menu-item>
-    </el-menu>
+    <el-row>
+        <el-col :span="2">
+            <el-menu
+                background-color="#112A37"
+                text-color="#4F5B68"
+                active-text-color="#63C3A8"
+                default-active="0"
+                :router="true">
+                <el-row class="logo" type="flex" justify="center" align="middle">
+                    <el-col :span="19">
+                        <img src="../assets/logo_GA.png" alt="Logo Gestão de Atividades">
+                    </el-col>
+                </el-row>
+                <el-menu-item class="sidebar-item" v-for="item in sidebarItems" :key="item.id" :index="item.id.toString()" :route="item.urlRoute">
+                    <SidebarItem :urlIcon="item.src" :title="item.title"></SidebarItem>
+                </el-menu-item>
+            </el-menu>
+        </el-col>
+    </el-row>
 </template>
 
 <script>
@@ -32,9 +36,6 @@
                     { id: 5, src: "edit-cinza.png", title: "Disciplinas", urlRoute: "/dashboard/disciplinas" }
                 ]
             }
-        },
-        beforeUpdate() {
-
         },
         components: {
             SidebarItem
@@ -55,7 +56,7 @@
         }
     }    
     .sidebar-item {
-        height: auto;
+        height: auto !important;
     }
     .is-active {
         border-left: 3px solid #63C3A8;
