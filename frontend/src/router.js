@@ -31,33 +31,31 @@ export default new Router({
       path: '/dashboard',
       name: 'dashboard',
       component: () => import('./views/Dashboard/Dashboard.vue'),
-      children: [
-        {
-          path: 'alunos',
-          name: 'alunos',
-          component: () => import('./views/Dashboard/Alunos.vue')
-        },
-        {
-          path: 'projetos',
-          name: 'projetos',
-          component: () => import('./views/Dashboard/Projetos.vue')
-        },
-        {
-          path: 'pesquisa',
-          name: 'pesquisa',
-          component: () => import('./views/Dashboard/Pesquisa.vue')
-        },
-        {
-          path: 'publicacoes',
-          name: 'publicacoes',
-          component: () => import('./views/Dashboard/Publicacoes.vue')
-        },
-        {
-          path: 'disciplinas',
-          name: 'disciplinas',
-          component: () => import('./views/Dashboard/Disciplinas.vue')
-        }
-      ]
     },
+    {
+      path: '/dashboard/alunos',
+      name: 'alunos',
+      component: () => import('./views/Dashboard/Alunos.vue')
+    },
+    {
+      path: '/dashboard/projetos',
+      name: 'projetos',
+      component: () => import('./views/Dashboard/Projetos.vue')
+    },
+    {
+      path: '/dashboard/pesquisa',
+      name: 'pesquisa',
+      component: () => import('./views/Dashboard/Pesquisa.vue')
+    },
+    {
+      path: '/dashboard/publicacoes',
+      name: 'publicacoes',
+      component: () => import('./views/Dashboard/Publicacoes.vue')
+    },
+    {
+      path: '/dashboard/disciplinas',
+      name: 'disciplinas',
+      component: () => import('./views/Dashboard/Disciplinas.vue')
+    }
   ]
 })
