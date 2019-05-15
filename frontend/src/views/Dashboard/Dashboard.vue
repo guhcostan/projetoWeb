@@ -1,15 +1,6 @@
 <template>
     <el-container>
-        <div class="head">
-            <el-breadcrumb class="breadcrumb" separator="/">
-                <el-breadcrumb-item class="padding-left" :to="{ path: '/' }">Home</el-breadcrumb-item>
-                <el-breadcrumb-item>Dashboard</el-breadcrumb-item>
-            </el-breadcrumb>
-            <div class="professor">
-                <p>{{professor}}</p>
-                <img src="../../assets/icons/go-cinza.png" alt="" class="back-btn">
-            </div>
-        </div>
+        <Breadcrumb :professor="professor"></Breadcrumb>
         <el-row class="row" type="flex" justify="center" align="middle">
             <el-col class="dashboard-card" :span="20">
                 <el-row>
@@ -29,6 +20,7 @@
 
 <script>
 import Quantitative from '@/components/Quantitative.vue';
+import Breadcrumb from '@/components/Breadcrumb.vue';
 
 export default {
     name: "Dashboard",
@@ -44,7 +36,8 @@ export default {
         }
     },
     components: {
-        Quantitative
+        Quantitative,
+        Breadcrumb
     }
 }
 </script>
@@ -53,39 +46,8 @@ export default {
     .el-container {
         height: 100vh;
     }
-    .head {
-        height: 15vh;
-        background-color: #F9F9FA;
-        display: flex;
-        font-size: 1.4rem;
-        .breadcrumb {
-            color: #D9DCE1;
-            flex: 1;
-            height: inherit;
-            line-height: 15vh;
-            .padding-left {
-                padding-left: 4rem;
-            }
-        }
-        .professor {
-            flex: 0 0 25%;
-            color: #6D6E76;
-            height: inherit;
-            line-height: 15vh;
-            p {
-                margin: 0;
-                display: inline-block;
-            }
-            .back-btn {
-                position: absolute;
-                top: 7.5%;
-                transform: translateY(-50%);
-                width: 1.8rem;
-            }
-        }
-    }
     .row {
-        height: 85vh;
+        height: 70vh;
         .dashboard-card {
             border: 1px solid white;
             border-radius: 15px;

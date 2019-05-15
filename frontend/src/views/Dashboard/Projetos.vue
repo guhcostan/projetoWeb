@@ -1,17 +1,22 @@
 <template>
     <el-container>
-        <el-breadcrumb class="breadcrumb" separator="/">
-            <el-breadcrumb-item :to="{ path: '/' }">homepage</el-breadcrumb-item>
-            <el-breadcrumb-item><a href="/">promotion management</a></el-breadcrumb-item>
-            <el-breadcrumb-item>promotion list</el-breadcrumb-item>
-            <el-breadcrumb-item>promotion detail</el-breadcrumb-item>
-        </el-breadcrumb>
+        <Breadcrumb :professor='professor'></Breadcrumb>
     </el-container>
 </template>
 
 <script>
+import Breadcrumb from '@/components/Breadcrumb.vue';
+
 export default {
-    name: "Projetos"
+    name: "Projetos",
+    data() {
+        return {
+            professor: 'Rafael Durelli'
+        }
+    },
+    components: {
+        Breadcrumb
+    }
 }
 </script>
 
