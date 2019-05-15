@@ -76,8 +76,6 @@ export default {
                 background-color: #63C3A8;
                 font-size: 1.8rem;
             }
-
         }
-
     }
 </style>
