@@ -28,7 +28,7 @@ export default {
             height: 4rem;
         }
         .title {
-            border-bottom: 1px solid #E4E6E9;
+            border-bottom: 1px solid #4F5B68;
             margin: 0;
             padding: 1rem 0;
             white-space: normal;

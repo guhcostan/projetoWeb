@@ -47,7 +47,7 @@
     .logo {
         .el-col {
             text-align: center;
-            border-bottom: 1px solid #E4E6E9;
+            border-bottom: 1px solid #4F5B68;
             padding: 2rem 0 2rem 0;
             height: 15vh;
             img {
@@ -63,5 +63,8 @@
         img {
             filter: hue-rotate(304deg) saturate(2.5) brightness(195%);
         }
+    }
+    .el-row:after, .el-row:before {
+        display: none !important;
     }
 </style>

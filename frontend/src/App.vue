@@ -9,6 +9,9 @@
     </div>
     <div v-else>
       <SideBar></SideBar>
+      <div class="view">
+        <router-view></router-view>
+      </div>
     </div>
   </div>
 </template>
@@ -19,7 +22,7 @@
   import SideBar from "./components/SideBar";
   export default {
     props: {
-      login: false
+      login: Boolean
     },
     methods: {
       isLogged() {
