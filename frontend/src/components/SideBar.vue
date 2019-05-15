@@ -47,9 +47,12 @@
 <style lang="scss">
     .logo {
         .el-col {
+            display: flex;
+            justify-content: center;
+            align-items: center;
             text-align: center;
             border-bottom: 1px solid #4F5B68;
-            padding: 2rem 0 2rem 0;
+            // padding: 2rem 0 2rem 0;
             height: 15vh;
             img {
                 width: 6rem; 
