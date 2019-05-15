@@ -33,27 +33,27 @@ export default new Router({
       component: () => import('./views/Dashboard/Dashboard.vue'),
     },
     {
-      path: '/dashboard/alunos',
+      path: '/alunos',
       name: 'alunos',
       component: () => import('./views/Dashboard/Alunos.vue')
     },
     {
-      path: '/dashboard/projetos',
+      path: '/projetos',
       name: 'projetos',
       component: () => import('./views/Dashboard/Projetos.vue')
     },
     {
-      path: '/dashboard/pesquisa',
+      path: '/grupo_de_pesquisa',
       name: 'pesquisa',
       component: () => import('./views/Dashboard/Pesquisa.vue')
     },
     {
-      path: '/dashboard/publicacoes',
+      path: '/publicacoes',
       name: 'publicacoes',
       component: () => import('./views/Dashboard/Publicacoes.vue')
     },
     {
-      path: '/dashboard/disciplinas',
+      path: '/disciplinas',
       name: 'disciplinas',
       component: () => import('./views/Dashboard/Disciplinas.vue')
     }
