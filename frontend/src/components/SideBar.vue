@@ -2,6 +2,7 @@
     <el-row>
         <el-col :span="2">
             <el-menu
+                class="sidebar"
                 background-color="#112A37"
                 text-color="#4F5B68"
                 active-text-color="#63C3A8"
@@ -55,6 +56,9 @@
             }
         }
     }    
+    .sidebar {
+        height: 100vh;
+    }
     .sidebar-item {
         height: auto !important;
     }
