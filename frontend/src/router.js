@@ -26,6 +26,36 @@ export default new Router({
       path: '/login',
       name: 'login',
       component: () => import('./views/Login.vue')
+    },
+    {
+      path: '/dashboard',
+      name: 'dashboard',
+      component: () => import('./views/Dashboard/Dashboard.vue'),
+    },
+    {
+      path: '/alunos',
+      name: 'alunos',
+      component: () => import('./views/Dashboard/Alunos.vue')
+    },
+    {
+      path: '/projetos',
+      name: 'projetos',
+      component: () => import('./views/Dashboard/Projetos.vue')
+    },
+    {
+      path: '/grupo_de_pesquisa',
+      name: 'pesquisa',
+      component: () => import('./views/Dashboard/Pesquisa.vue')
+    },
+    {
+      path: '/publicacoes',
+      name: 'publicacoes',
+      component: () => import('./views/Dashboard/Publicacoes.vue')
+    },
+    {
+      path: '/disciplinas',
+      name: 'disciplinas',
+      component: () => import('./views/Dashboard/Disciplinas.vue')
     }
   ]
 })
