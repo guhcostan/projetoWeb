@@ -21,8 +21,10 @@
   import AppFooter from "./components/Footer";
   import SideBar from "./components/SideBar";
   export default {
-    props: {
-      login: Boolean
+    data() {
+      return {
+        login: false
+      }
     },
     methods: {
       isLogged() {
