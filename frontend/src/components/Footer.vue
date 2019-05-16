@@ -1,6 +1,6 @@
 <template >
     <div class="footer">
-        <p>Universidade Federal de Lavras</p>
+        <p>Universidade Federal e Lavras</p>
         <p>Departamento de Ciência da Computação</p>
     </div>
 </template>

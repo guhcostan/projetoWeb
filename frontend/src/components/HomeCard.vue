@@ -1,7 +1,7 @@
 <template>
     <router-link to="/" class="home-card">
         <div> 
-            <img :src="require(`@/assets/icons/${urlIcon}`)"/>
+            <img :src="require(`@/assets/${urlIcon}`)"/>
         </div>
         <h3>{{title}}</h3>
     </router-link>
@@ -12,8 +12,7 @@ export default {
     name: 'homeCard',
     props: {
         urlIcon: String,
-        title: String,
-        urlRoute: String
+        title: String
     },
 }
 </script>
@@ -36,7 +35,7 @@ export default {
                 top: 50%;
                 left: 50%;
                 transform: translate(-50%, -50%);
-                width: 5.4rem; 
+                width: 7rem; 
                 margin: auto;
             }
         }
