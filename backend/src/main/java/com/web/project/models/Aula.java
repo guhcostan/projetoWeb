@@ -16,12 +16,12 @@ import javax.persistence.*;
 @Table(name = "aulas")
 public class Aula {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private Long id;
 
-    private String nome;
+	private String nome;
 
-    private TipoAula tipo;
+	private TipoAula tipo;
 
 }

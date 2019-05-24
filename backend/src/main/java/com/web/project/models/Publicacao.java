@@ -10,12 +10,12 @@ import javax.persistence.*;
 @Table(name = "publicacoes")
 public class Publicacao {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private Long id;
 
-    private byte[] metadados;
+	private byte[] metadados;
 
-    private TipoPublicacao tipo;
+	private TipoPublicacao tipo;
 
 }

@@ -15,36 +15,36 @@ import org.springframework.web.servlet.mvc.method.annotation.ResponseEntityExcep
 @ControllerAdvice
 public class GlobalExceptionHandler extends ResponseEntityExceptionHandler {
 
-    @ExceptionHandler(NotFoundException.class)
-    public final ResponseEntity<Object> handleNotFoundException(NotFoundException ex, WebRequest request) {
+	@ExceptionHandler(NotFoundException.class)
+	public final ResponseEntity<Object> handleNotFoundException(NotFoundException ex, WebRequest request) {
 
-        return handleExceptionInternal(ex, null, null, HttpStatus.NOT_FOUND, request);
+		return handleExceptionInternal(ex, null, null, HttpStatus.NOT_FOUND, request);
 
-    }
+	}
 
-    @ExceptionHandler(RestClientException.class)
-    public final ResponseEntity<Object> handleRestClientException(RestClientException ex, WebRequest request) {
+	@ExceptionHandler(RestClientException.class)
+	public final ResponseEntity<Object> handleRestClientException(RestClientException ex, WebRequest request) {
 
-        return handleExceptionInternal(ex, null, null, HttpStatus.INTERNAL_SERVER_ERROR, request);
+		return handleExceptionInternal(ex, null, null, HttpStatus.INTERNAL_SERVER_ERROR, request);
 
-    }
+	}
 
-    @ExceptionHandler(Exception.class)
-    public final ResponseEntity<Object> handleNotThreatedException(Exception ex, WebRequest request) {
+	@ExceptionHandler(Exception.class)
+	public final ResponseEntity<Object> handleNotThreatedException(Exception ex, WebRequest request) {
 
-        return handleExceptionInternal(ex, null, null, HttpStatus.INTERNAL_SERVER_ERROR, request);
+		return handleExceptionInternal(ex, null, null, HttpStatus.INTERNAL_SERVER_ERROR, request);
 
-    }
+	}
 
-    @Override
-    protected ResponseEntity<Object> handleExceptionInternal(Exception ex,
-                                                             Object body, HttpHeaders headers, HttpStatus status,
-                                                             WebRequest request) {
+	@Override
+	protected ResponseEntity<Object> handleExceptionInternal(Exception ex,
+															 Object body, HttpHeaders headers, HttpStatus status,
+															 WebRequest request) {
 
-        logger.error(ex.getLocalizedMessage(), ex);
+		logger.error(ex.getLocalizedMessage(), ex);
 
-        return super.handleExceptionInternal(ex, body, headers, status, request);
+		return super.handleExceptionInternal(ex, body, headers, status, request);
 
-    }
+	}
 
 }

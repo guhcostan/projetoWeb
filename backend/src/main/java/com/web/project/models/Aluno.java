@@ -1,12 +1,14 @@
 package com.web.project.models;
 
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -27,35 +29,37 @@ import java.util.List;
 @Table(name = "alunos")
 public class Aluno {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private Long id;
 
-    private String nome;
+	private String nome;
 
-    private String cpf;
+	private String cpf;
 
-    @ManyToMany
-    @JoinTable(name = "rel_aluno_grupo_pesquisa", joinColumns =
-            {@JoinColumn(name = "aluno_id")}, inverseJoinColumns =
-            {@JoinColumn(name = "grupo_id")})
-    private List<GrupoPesquisa> gruposPesquisa = new ArrayList<>();
+	@JsonIgnore
+	@ManyToMany
+	@JoinTable(name = "rel_aluno_grupo_pesquisa", joinColumns =
+			{@JoinColumn(name = "aluno_id")}, inverseJoinColumns =
+			{@JoinColumn(name = "grupo_id")})
+	private List<GrupoPesquisa> gruposPesquisa = new ArrayList<>();
 
-    @OneToMany(mappedBy = "pesquisador")
-    private List<ProjetoPesquisa> projetoPesquisas = new ArrayList<>() ;
+	@JsonIgnore
+	@OneToMany(mappedBy = "pesquisador")
+	private List<ProjetoPesquisa> projetoPesquisas = new ArrayList<>();
 
-    private TipoAluno tipo;
+	private TipoAluno tipo;
 
-    public Aluno(String nome, String cpf, TipoAluno doutorado) {
+	public Aluno(String nome, String cpf, TipoAluno doutorado) {
 
-        this.nome = nome;
-        this.tipo = doutorado;
-        this.cpf = cpf;
-    }
+		this.nome = nome;
+		this.tipo = doutorado;
+		this.cpf = cpf;
+	}
 
-    public void addProjeto(ProjetoPesquisa projetoPesquisa) {
+	public void addProjeto(ProjetoPesquisa projetoPesquisa) {
 
-        this.projetoPesquisas.add(projetoPesquisa);
-    }
+		this.projetoPesquisas.add(projetoPesquisa);
+	}
 
 }

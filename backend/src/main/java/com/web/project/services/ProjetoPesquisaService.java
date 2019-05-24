@@ -10,12 +10,12 @@ import java.util.Optional;
 @Service
 public class ProjetoPesquisaService {
 
-    @Autowired
-    private ProjetoPesquisaRepository projetoPesquisaRepository;
+	@Autowired
+	private ProjetoPesquisaRepository projetoPesquisaRepository;
 
-    public Optional<ProjetoPesquisa> findById(Long id) {
+	public Optional<ProjetoPesquisa> findById(Long id) {
 
-        return projetoPesquisaRepository.findById(id);
-    }
+		return projetoPesquisaRepository.findById(id);
+	}
 
 }
