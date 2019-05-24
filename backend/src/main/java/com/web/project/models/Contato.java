@@ -9,12 +9,12 @@ import javax.persistence.*;
 @Table(name = "contato")
 public class Contato {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private Long id;
 
-    private String telefone;
+	private String telefone;
 
-    private String sala;
+	private String sala;
 
 }
