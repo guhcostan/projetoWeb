@@ -6,7 +6,11 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import javax.persistence.*;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
 
 @Data
 @Builder
@@ -23,5 +27,12 @@ public class Aula {
 	private String nome;
 
 	private TipoAula tipo;
+
+	public Aula(String nome, TipoAula tipo) {
+
+		this.nome = nome;
+		this.tipo = tipo;
+
+	}
 
 }
