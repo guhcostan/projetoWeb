@@ -34,11 +34,11 @@ const hideLoading = () => {
 
 export default class Http {
 
-    static baseURL () {
+    static baseURL() {
         return BASE_URL;
     }
 
-    static _getOptionValue (options, prop, defaultValue) {
+    static _getOptionValue(options, prop, defaultValue) {
 
         if (!options || !options.hasOwnProperty(prop)) {
             return defaultValue;
@@ -47,7 +47,7 @@ export default class Http {
         }
     }
 
-    static _handleRequestPromisse (promisse, options) {
+    static _handleRequestPromisse(promisse, options) {
 
         setTimeout(function () {
             promisse.then(response => {
@@ -96,7 +96,7 @@ export default class Http {
         }, 1000);
     }
 
-    static _setDefaultOptions (options) {
+    static _setDefaultOptions(options) {
 
         options = options || {};
         options.fullUrl = this.baseURL() + options.url;
@@ -106,7 +106,7 @@ export default class Http {
         return options;
     }
 
-    static get (options) {
+    static get(options) {
 
         options = Http._setDefaultOptions(options);
 
@@ -115,14 +115,14 @@ export default class Http {
             showLoading(options);
         }
 
-        var promisse = options.data ? axios.get(options.fullUrl, { params: options.data }) : axios.get(options.fullUrl);
+        var promisse = options.data ? axios.get(options.fullUrl, {params: options.data}) : axios.get(options.fullUrl);
 
         Http._handleRequestPromisse(promisse, options);
 
         return promisse;
     }
 
-    static post (options) {
+    static post(options) {
 
         options = Http._setDefaultOptions(options);
 
@@ -138,7 +138,7 @@ export default class Http {
         return promisse;
     }
 
-    static delete (options) {
+    static delete(options) {
 
         options = Http._setDefaultOptions(options);
 
@@ -147,14 +147,14 @@ export default class Http {
             showLoading(options);
         }
 
-        var promisse = options.data ? axios.delete(options.fullUrl, { params: options.data }) : axios.delete(options.fullUrl);
+        var promisse = options.data ? axios.delete(options.fullUrl, {params: options.data}) : axios.delete(options.fullUrl);
 
         Http._handleRequestPromisse(promisse, options);
 
         return promisse;
     }
 
-    static put (options) {
+    static put(options) {
 
         options = Http._setDefaultOptions(options);
 

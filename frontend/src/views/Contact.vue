@@ -27,26 +27,28 @@
         padding: 100px 0;
         color: #112A37;
 
-        .card-sobre{
+        .card-sobre {
             border: solid white 2px;
             border-radius: 10px;
             padding: 40px 20px;
         }
-        .texto{
+
+        .texto {
             font-size: 25px;
             padding-left: 10px;
 
             font-weight: lighter;
         }
 
-        .el-row{
+        .el-row {
             padding: 20px;
         }
-        .title{
+
+        .title {
             font-weight: bold;
         }
 
-        .titulo-pagina{
+        .titulo-pagina {
             padding-bottom: 30px;
             font-size: 50px;
             font-weight: lighter;
