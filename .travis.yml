@@ -14,8 +14,7 @@ matrix:
 
     - language: java
       jdk:
-        - oraclejdk11
-      dist: xenial
+        - openjdk8
       before_script:
         - cd backend
       cache:
