@@ -29,6 +29,11 @@
                 this.$router.push('/');
             }
         },
+        watch: {
+            '$route' (to, from){
+                this.currentPath = this.$route.path.split('/').splice(1);
+            }
+        },
         mounted() {
             const path = this.$route.path.split('/').splice(1);
             this.currentPath = path;
