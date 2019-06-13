@@ -15,43 +15,43 @@ import java.util.List;
 @RestController
 public class AlunoController {
 
-    @Autowired
-    private AlunoService alunoService;
+	@Autowired
+	private AlunoService alunoService;
 
-    @GetMapping(value = "/alunos")
-    public List<Aluno> getAll() {
+	@GetMapping(value = "/alunos")
+	public List<Aluno> getAll() {
 
-        return alunoService.getAll();
+		return alunoService.getAll();
 
-    }
+	}
 
-    @GetMapping(value = "/aluno")
-    public Aluno get() {
+	@GetMapping(value = "/aluno")
+	public Aluno get() {
 
-        Aluno aluno = alunoService.getAll().get(0);
-        return aluno;
+		Aluno aluno = alunoService.getAll().get(0);
+		return aluno;
 
-    }
+	}
 
-    @PostMapping(value = "/cadastrarAluno")
-    public void createAluno(String nome, String cpf, String tipoAluno) {
+	@PostMapping(value = "/cadastrarAluno")
+	public void createAluno(String nome, String cpf, String tipoAluno) {
 
-        alunoService.criarAluno(nome, cpf, TipoAluno.valueOf(tipoAluno));
+		alunoService.criarAluno(nome, cpf, TipoAluno.valueOf(tipoAluno));
 
-    }
+	}
 
-    @PostMapping(value = "/adicionarProjetoAluno")
-    public void adicionarProjetoAluno(String cpfAluno, Long idProjeto) {
+	@PostMapping(value = "/adicionarProjetoAluno")
+	public void adicionarProjetoAluno(String cpfAluno, Long idProjeto) {
 
-        alunoService.vincularProjetoAluno(cpfAluno, idProjeto);
+		alunoService.vincularProjetoAluno(cpfAluno, idProjeto);
 
-    }
+	}
 
-    @DeleteMapping(value = "/deletaAluno")
-    public void deletaAluno(String cpf) throws NotFoundException {
+	@DeleteMapping(value = "/deletaAluno")
+	public void deletaAluno(String cpf) throws NotFoundException {
 
-        alunoService.deletar(cpf);
+		alunoService.deletar(cpf);
 
-    }
+	}
 
 }
