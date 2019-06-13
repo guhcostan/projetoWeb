@@ -38,6 +38,11 @@ export default new Router({
       component: () => import('./views/Dashboard/Alunos.vue')
     },
     {
+      path: '/cadastrar_aluno',
+      name: 'cadastrar_aluno',
+      component: () => import('./views/Dashboard/CadastrarAluno.vue')
+    },
+    {
       path: '/projetos',
       name: 'projetos',
       component: () => import('./views/Dashboard/Projetos.vue')
