@@ -16,21 +16,24 @@ import org.springframework.web.servlet.mvc.method.annotation.ResponseEntityExcep
 public class GlobalExceptionHandler extends ResponseEntityExceptionHandler {
 
 	@ExceptionHandler(NotFoundException.class)
-	public final ResponseEntity<Object> handleNotFoundException(NotFoundException ex, WebRequest request) {
+	public final ResponseEntity<Object> handleNotFoundException(NotFoundException ex,
+		WebRequest request) {
 
 		return handleExceptionInternal(ex, null, null, HttpStatus.NOT_FOUND, request);
 
 	}
 
 	@ExceptionHandler(RestClientException.class)
-	public final ResponseEntity<Object> handleRestClientException(RestClientException ex, WebRequest request) {
+	public final ResponseEntity<Object> handleRestClientException(RestClientException ex,
+		WebRequest request) {
 
 		return handleExceptionInternal(ex, null, null, HttpStatus.INTERNAL_SERVER_ERROR, request);
 
 	}
 
 	@ExceptionHandler(Exception.class)
-	public final ResponseEntity<Object> handleNotThreatedException(Exception ex, WebRequest request) {
+	public final ResponseEntity<Object> handleNotThreatedException(Exception ex,
+		WebRequest request) {
 
 		return handleExceptionInternal(ex, null, null, HttpStatus.INTERNAL_SERVER_ERROR, request);
 
@@ -38,8 +41,8 @@ public class GlobalExceptionHandler extends ResponseEntityExceptionHandler {
 
 	@Override
 	protected ResponseEntity<Object> handleExceptionInternal(Exception ex,
-															 Object body, HttpHeaders headers, HttpStatus status,
-															 WebRequest request) {
+		Object body, HttpHeaders headers, HttpStatus status,
+		WebRequest request) {
 
 		logger.error(ex.getLocalizedMessage(), ex);
 

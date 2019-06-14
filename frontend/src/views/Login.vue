@@ -10,7 +10,8 @@
                                       v-model="loginForm.name"></el-input>
                         </el-form-item>
                         <el-form-item>
-                            <el-input placeholder="************" suffix-icon="el-icon-lock" type="password"
+                            <el-input placeholder="************" suffix-icon="el-icon-lock"
+                                      type="password"
                                       v-model="loginForm.password"></el-input>
                         </el-form-item>
                         <el-form-item>

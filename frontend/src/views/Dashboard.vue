@@ -6,17 +6,17 @@
 </template>
 
 <script>
-    import Breadcrumb from '@/components/Breadcrumb.vue';
+	import Breadcrumb from '@/components/Breadcrumb.vue';
 
-    export default {
+	export default {
         name: "Dashboard",
         data() {
             return {
                 quantitatives: [
-                    {quantity: 0, title: "Alunos"},
-                    {quantity: 2, title: "Projetos"},
-                    {quantity: 1, title: "Publicações"},
-                    {quantity: 3, title: "Disciplinas"},
+                    { quantity: 0, title: "Alunos" },
+                    { quantity: 2, title: "Projetos" },
+                    { quantity: 1, title: "Publicações" },
+                    { quantity: 3, title: "Disciplinas" },
                 ],
                 professor: 'Rafael Durelli'
             }

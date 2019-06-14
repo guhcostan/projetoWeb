@@ -14,7 +14,7 @@ Vue.prototype.$bus = new Vue();
 
 Vue.config.productionTip = false;
 
-Vue.use(ElementUI, {locale});
+Vue.use(ElementUI, { locale });
 
 new Vue({
     router,

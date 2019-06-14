@@ -7,10 +7,10 @@
                     <el-col :key="index" :span="6" class="quantitative-array"
                             v-for="(quantitative, index) in quantitatives">
                         <Quantitative
-                                :isFirst="index === 0 ? true : false"
-                                :isLast="index === (quantitatives.length - 1) ? true : false"
-                                :quantity="quantitative.quantity"
-                                :title="quantitative.title">
+                            :isFirst="index === 0 ? true : false"
+                            :isLast="index === (quantitatives.length - 1) ? true : false"
+                            :quantity="quantitative.quantity"
+                            :title="quantitative.title">
                         </Quantitative>
                     </el-col>
                 </el-row>

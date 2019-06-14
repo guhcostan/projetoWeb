@@ -13,7 +13,7 @@
         },
         methods: {
             pingBack() {
-                http.get({url: '/teste'}).then((data) => {
+                http.get({ url: '/teste' }).then((data) => {
                     console.log(data)
                 });
             }

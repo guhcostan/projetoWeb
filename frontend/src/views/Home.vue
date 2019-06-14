@@ -3,24 +3,25 @@
         <h1 class="title">Gestão de atividades</h1>
         <h2 class="professor">Professor Rafael Durelli</h2>
         <div class="cardContainer">
-            <HomeCard :key="card.id" :title="card.title" :urlIcon="card.src" v-for="card in homeCards"></HomeCard>
+            <HomeCard :key="card.id" :title="card.title" :urlIcon="card.src"
+                      v-for="card in homeCards"></HomeCard>
         </div>
     </div>
 </template>
 
 <script>
-  // @ is an alias to /src
-  import HomeCard from '@/components/HomeCard.vue'
+    // @ is an alias to /src
+    import HomeCard from '@/components/HomeCard.vue'
 
-  export default {
+    export default {
         name: 'home',
         data: function () {
             return {
                 homeCards: [
-                    {id: 0, src: "folder-cinza.png", title: "Projetos"},
-                    {id: 1, src: "lab-cinza.png", title: "Grupo de Pesquisa"},
-                    {id: 2, src: "document-cinza.png", title: "Publicações"},
-                    {id: 3, src: "edit-cinza.png", title: "Disciplinas"}
+                    { id: 0, src: "folder-cinza.png", title: "Projetos" },
+                    { id: 1, src: "lab-cinza.png", title: "Grupo de Pesquisa" },
+                    { id: 2, src: "document-cinza.png", title: "Publicações" },
+                    { id: 3, src: "edit-cinza.png", title: "Disciplinas" }
                 ]
             }
         },

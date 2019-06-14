@@ -2,12 +2,12 @@
     <el-row>
         <el-col :span="2">
             <el-menu
-                    :router="true"
-                    active-text-color="#63C3A8"
-                    background-color="#112A37"
-                    class="sidebar"
-                    default-active="0"
-                    text-color="#4F5B68">
+                :router="true"
+                active-text-color="#63C3A8"
+                background-color="#112A37"
+                class="sidebar"
+                default-active="0"
+                text-color="#4F5B68">
                 <el-row align="middle" class="logo" justify="center" type="flex">
                     <el-col :span="19">
                         <img alt="Logo Gestão de Atividades" src="../assets/logo_GA.png">
@@ -30,12 +30,37 @@
         data() {
             return {
                 sidebarItems: [
-                    {id: 0, src: "home-cinza.png", title: "Home", urlRoute: "/dashboard/home"},
-                    {id: 1, src: "user-cinza.png", title: "Alunos", urlRoute: "/dashboard/alunos"},
-                    {id: 2, src: "folder-cinza.png", title: "Projetos", urlRoute: "/dashboard/projetos"},
-                    {id: 3, src: "lab-cinza.png", title: "Grupo de Pesquisa", urlRoute: "/dashboard/grupo_de_pesquisa"},
-                    {id: 4, src: "document-cinza.png", title: "Publicações", urlRoute: "/dashboard/publicacoes"},
-                    {id: 5, src: "edit-cinza.png", title: "Disciplinas", urlRoute: "/dashboard/disciplinas"}
+                    { id: 0, src: "home-cinza.png", title: "Home", urlRoute: "/dashboard/home" },
+                    {
+                        id: 1,
+                        src: "user-cinza.png",
+                        title: "Alunos",
+                        urlRoute: "/dashboard/alunos"
+                    },
+                    {
+                        id: 2,
+                        src: "folder-cinza.png",
+                        title: "Projetos",
+                        urlRoute: "/dashboard/projetos"
+                    },
+                    {
+                        id: 3,
+                        src: "lab-cinza.png",
+                        title: "Grupo de Pesquisa",
+                        urlRoute: "/dashboard/grupo_de_pesquisa"
+                    },
+                    {
+                        id: 4,
+                        src: "document-cinza.png",
+                        title: "Publicações",
+                        urlRoute: "/dashboard/publicacoes"
+                    },
+                    {
+                        id: 5,
+                        src: "edit-cinza.png",
+                        title: "Disciplinas",
+                        urlRoute: "/dashboard/disciplinas"
+                    }
                 ]
             }
         },

@@ -2,7 +2,9 @@
     <div class="head">
         <el-breadcrumb class="breadcrumb" separator="/">
             <el-breadcrumb-item class="padding-left">Home</el-breadcrumb-item>
-            <el-breadcrumb-item :key="index" v-for="(path, index) in currentPath">{{ path.replace(/_/g, ' ') }}
+            <el-breadcrumb-item :key="index" v-for="(path, index) in currentPath">{{
+                path.replace(/_/g, '
+                ') }}
             </el-breadcrumb-item>
         </el-breadcrumb>
         <div class="professor">
@@ -30,7 +32,7 @@
             }
         },
         watch: {
-            '$route' (to, from){
+            '$route'(to, from) {
                 this.currentPath = this.$route.path.split('/').splice(1);
             }
         },

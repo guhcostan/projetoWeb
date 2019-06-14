@@ -1,6 +1,7 @@
 <template>
     <el-row align="middle" justify="center" type="flex">
-        <el-col :class="{ 'first-quantitative': isFirst, 'last-quantitative': isLast }" :span="24" class="quantitative">
+        <el-col :class="{ 'first-quantitative': isFirst, 'last-quantitative': isLast }" :span="24"
+                class="quantitative">
             <h1>{{quantity}}</h1>
             <p>{{title}}</p>
         </el-col>

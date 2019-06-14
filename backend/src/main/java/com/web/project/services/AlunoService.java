@@ -4,12 +4,11 @@ import com.web.project.models.Aluno;
 import com.web.project.models.ProjetoPesquisa;
 import com.web.project.models.TipoAluno;
 import com.web.project.repositories.AlunoRepository;
+import java.util.List;
+import java.util.Optional;
 import javassist.NotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
-import java.util.List;
-import java.util.Optional;
 
 @Service
 public class AlunoService {
@@ -37,7 +36,7 @@ public class AlunoService {
 
 		Optional<Aluno> aluno = alunoRepository.findByCpf(cpfAluno);
 
-		Optional<ProjetoPesquisa> projetoPesquisa = projetoPesquisaService.findById(idProjeto);
+		Optional<ProjetoPesquisa> projetoPesquisa = projetoPesquisaService.getById(idProjeto);
 
 		projetoPesquisa.ifPresent(pesquisa -> aluno.ifPresent(value -> value.addProjeto(pesquisa)));
 

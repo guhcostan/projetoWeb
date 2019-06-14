@@ -31,7 +31,7 @@
             height: 11rem;
             width: 11rem;
             background-color: #112A37;
-            box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.75);
+            box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.75);
 
             img {
                 position: absolute;

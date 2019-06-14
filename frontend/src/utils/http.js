@@ -115,7 +115,9 @@ export default class Http {
             showLoading(options);
         }
 
-        var promisse = options.data ? axios.get(options.fullUrl, {params: options.data}) : axios.get(options.fullUrl);
+        var promisse = options.data ? axios.get(options.fullUrl,
+            { params: options.data }) : axios.get(
+            options.fullUrl);
 
         Http._handleRequestPromisse(promisse, options);
 
@@ -147,7 +149,8 @@ export default class Http {
             showLoading(options);
         }
 
-        var promisse = options.data ? axios.delete(options.fullUrl, {params: options.data}) : axios.delete(options.fullUrl);
+        var promisse = options.data ? axios.delete(options.fullUrl,
+            { params: options.data }) : axios.delete(options.fullUrl);
 
         Http._handleRequestPromisse(promisse, options);
 

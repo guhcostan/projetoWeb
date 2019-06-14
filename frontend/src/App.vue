@@ -17,11 +17,11 @@
 </template>
 
 <script>
-  import AppHeader from "./components/Header";
-  import AppFooter from "./components/Footer";
-  import SideBar from "./components/SideBar";
+    import AppHeader from "./components/Header";
+    import AppFooter from "./components/Footer";
+    import SideBar from "./components/SideBar";
 
-  export default {
+    export default {
         props: {
             login: Boolean
         },
@@ -33,7 +33,7 @@
         mounted() {
             this.$root.$on('is-logged', this.isLogged);
         },
-        components: {AppHeader, AppFooter, SideBar}
+        components: { AppHeader, AppFooter, SideBar }
     }
 </script>
 
@@ -44,4 +44,4 @@
             width: 100%;
         }
     }
-</style>
+</style>l
