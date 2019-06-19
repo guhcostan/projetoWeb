@@ -9,9 +9,6 @@
                 <el-button class="cadastrar-aluno-btn" @click="$router.push('/cadastrar_aluno');"> Cadastrar </el-button>
             </el-col>
         </el-row>
-        <el-row>
-
-        </el-row>
     </el-container>
 </template>
 
