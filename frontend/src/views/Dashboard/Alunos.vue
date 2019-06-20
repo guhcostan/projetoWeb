@@ -40,6 +40,7 @@ export default {
                 font-weight: lighter;
             }
         .cadastrar-aluno-btn {
+            border-radius: 0;
             text-decoration: none;
             color: #FFFFFF;
             background-color: #63C3A8;
