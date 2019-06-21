@@ -31,12 +31,16 @@ public class AulaTests extends ProjectApplicationTests {
 	@Test
 	public void getAllAulas() throws Exception {
 
+		databaseCleaner.cleanAll();
+
 		this.mockMvc.perform(MockMvcRequestBuilders.get("/aulas"))
 			.andExpect(MockMvcResultMatchers.status().isOk());
 	}
 
 	@Test
 	public void createAula() throws Exception {
+
+		databaseCleaner.cleanAll();
 
 		this.mockMvc.perform(
 			MockMvcRequestBuilders.post("/cadastraAula").param("nome", "Aula").param("tipoAula", "GRADUACAO"))
@@ -51,7 +55,7 @@ public class AulaTests extends ProjectApplicationTests {
 		aulaController.createAula("Gustavo", "GRADUACAO");
 
 		this.mockMvc
-			.perform(MockMvcRequestBuilders.delete("/deletaAulax").param("id", "1"))
+			.perform(MockMvcRequestBuilders.delete("/deletaAula").param("id", "1"))
 			.andExpect(MockMvcResultMatchers.status().isOk());
 	}
 
