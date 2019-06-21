@@ -53,6 +53,11 @@ export default new Router({
                     component: () => import('./views/Dashboard/Pesquisa.vue')
                 },
                 {
+                    path: '/cadastrar_aluno',
+                    name: 'cadastrar_aluno',
+                    component: () => import('./views/Dashboard/CadastrarAluno.vue')
+                },
+                {
                     path: 'publicacoes',
                     name: 'publicacoes',
                     component: () => import('./views/Dashboard/Publicacoes.vue')

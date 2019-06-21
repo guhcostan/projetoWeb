@@ -9,7 +9,6 @@
 </template>
 
 <script>
-    import Breadcrumb from '@/components/Breadcrumb.vue';
     import disciplinaService from '../../services/disciplinaService';
 
     export default {
@@ -25,9 +24,6 @@
                 this.aulas = result.data;
                 console.log(result)
             })
-        },
-        components: {
-            Breadcrumb
         }
     }
 </script>

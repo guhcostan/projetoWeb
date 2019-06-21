@@ -1,7 +1,6 @@
 <template>
-    <el-container>
-        <Breadcrumb :professor='professor'></Breadcrumb>
-        <el-row type="flex" justify="center" align="middle">
+    <el-container id="cadastrarAluno">
+        <el-row class="row" type="flex" justify="center" align="middle">
             <el-col class="cadastro-form" :span="14" :xs="24" :md="10">
                 <div class="grid-content">
                     <h1>Cadastrar Aluno</h1>
@@ -32,8 +31,6 @@
 </template>
 
 <script>
-import Breadcrumb from '@/components/Breadcrumb.vue';
-
 export default {
     name: "Cadastrar",
     data() {
@@ -50,38 +47,45 @@ export default {
         onSubmit() {
             console.log('submit!');
         }
-    },
-    components: {
-        Breadcrumb
     }
 }
 </script>
 
 <style lang="scss">
-    .cadastro-form {
-        margin: 60px;
-        border: 1px solid white;
-        border-radius: 10px;
-        padding: 3rem, ;
-        h1 {
-            font-size: 2rem;
-            font-weight: lighter;
-            padding-bottom: 2rem;
+    #cadastrarAluno {
+
+        .row{
+            width: 100%;
         }
-    }
-    .cadastrar-btn {
-        border-radius: 0;
-        margin-top: 3rem;
-        margin-left: 1rem;
-        text-decoration: none;
-        color: #FFFFFF;
-        background-color: #63C3A8;
-        padding: 1rem 2rem;
-        font-size: 1em;
-        float:right
-    } 
-    .display-categoria {
-        display: inline-block;
+
+        .cadastro-form {
+            margin: 60px;
+            border: 1px solid white;
+            border-radius: 10px;
+            padding: 3rem;
+
+            h1 {
+                font-size: 2rem;
+                font-weight: lighter;
+                padding-bottom: 2rem;
+            }
+        }
+
+        .cadastrar-btn {
+            border-radius: 0;
+            margin-top: 3rem;
+            margin-left: 1rem;
+            text-decoration: none;
+            color: #FFFFFF;
+            background-color: #63C3A8;
+            padding: 1rem 2rem;
+            font-size: 1em;
+            float: right
+        }
+
+        .display-categoria {
+            display: inline-block;
+        }
     }
 
 </style>

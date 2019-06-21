@@ -30,7 +30,7 @@
             }
         },
         watch: {
-            '$route'(to, from) {
+            '$route'() {
                 this.currentPath = this.$route.path.split('/').splice(1);
             }
         },
