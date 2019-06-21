@@ -1,6 +1,7 @@
 package com.web.project;
 
 import com.web.project.repositories.AlunoRepository;
+import com.web.project.repositories.AulaRepository;
 import com.web.project.repositories.ContatoRepository;
 import com.web.project.repositories.GrupoPesquisaRepository;
 import com.web.project.repositories.PublicacaoRepository;
@@ -14,6 +15,9 @@ public class DatabaseCleaner {
 	private AlunoRepository alunoRepository;
 
 	@Autowired
+	private AulaRepository aulaRepository;
+
+	@Autowired
 	private ContatoRepository cleanDocumentoSolicitacao;
 
 	@Autowired
@@ -25,6 +29,7 @@ public class DatabaseCleaner {
 	void cleanAll() {
 
 		this.alunoRepository.deleteAll();
+		this.aulaRepository.deleteAll();
 		this.cleanDocumentoSolicitacao.deleteAll();
 		this.grupoPesquisaRepository.deleteAll();
 		this.publicacaoRepository.deleteAll();
