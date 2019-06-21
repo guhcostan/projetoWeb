@@ -45,14 +45,14 @@ public class ProjetoPesquisaController {
 	@PostMapping(value = "/criarProjeto")
 	public void createAluno(String nome, String resumo, String anoInicio, String anoTermino,
 		MultipartFile arquivo,
-		String dissertacao, String tese, String pesquisadorCpf) {
+		String dissertacao, String tese, String pesquisadorCpf) throws IOException {
 
 		Path filepath = Paths.get(pathFiles.toString(), arquivo.getOriginalFilename());
 
 		try (OutputStream os = Files.newOutputStream(filepath)) {
 			os.write(arquivo.getBytes());
 		} catch (IOException e) {
-			e.printStackTrace();
+			throw new IOException(e);
 		}
 
 		File arquivoSalvo = new File(filepath.toUri());

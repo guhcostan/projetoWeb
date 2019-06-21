@@ -24,14 +24,6 @@ public class AlunoController {
 
 	}
 
-	@GetMapping(value = "/aluno")
-	public Aluno get() {
-
-		Aluno aluno = alunoService.getAll().get(0);
-		return aluno;
-
-	}
-
 	@PostMapping(value = "/cadastrarAluno")
 	public void createAluno(String nome, String cpf, String tipoAluno) {
 

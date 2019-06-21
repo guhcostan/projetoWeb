@@ -32,14 +32,14 @@ public class AulaController {
 	}
 
 	@PostMapping(value = "/cadastraAula")
-	public void createAluno(String nome, String tipoAula) {
+	public void createAula(String nome, String tipoAula) {
 
 		aulaService.criarAluno(nome, TipoAula.valueOf(tipoAula));
 
 	}
 
 	@DeleteMapping(value = "/deletaAula")
-	public void deletaAluno(long id) throws NotFoundException {
+	public void deletaAula(long id) throws NotFoundException {
 
 		aulaService.deletar(id);
 
