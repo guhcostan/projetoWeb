@@ -21,9 +21,6 @@ public class ProjetoPesquisaService {
 	@Autowired
 	private AlunoRepository alunoRepository;
 
-	@Autowired
-	private ProjetoPesquisaService projetoPesquisaService;
-
 	public List<ProjetoPesquisa> getAll() {
 
 		return projetoPesquisaRepository.findAll();

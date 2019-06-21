@@ -15,9 +15,6 @@ public class AulaService {
 	@Autowired
 	private AulaRepository aulaRepository;
 
-	@Autowired
-	private ProjetoPesquisaService projetoPesquisaService;
-
 	public List<Aula> getAll() {
 
 		return aulaRepository.findAll();

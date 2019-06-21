@@ -13,7 +13,8 @@ matrix:
         - node_modules
 
     - language: java
-      jdk: oraclejdk8
+      jdk:
+        - openjdk8
       before_script:
         - cd backend
       cache:
