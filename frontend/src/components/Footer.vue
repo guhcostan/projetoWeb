@@ -1,4 +1,4 @@
-<template >
+<template>
     <div class="footer">
         <p>Universidade Federal de Lavras</p>
         <p>Departamento de Ciência da Computação</p>
@@ -6,15 +6,15 @@
 </template>
 
 <script>
-export default {
-  name: 'Footer'
-}
+    export default {
+        name: 'Footer'
+    }
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped lang="scss">
+<style lang="scss" scoped>
 
-    .footer{
+    .footer {
         display: flex;
         justify-content: center;
         flex-direction: column;
@@ -23,6 +23,7 @@ export default {
         border-top: #112A37 solid 2px;
         color: #112A37;
         background-color: #D6D6D6;
+
         p {
             margin: 0;
         }

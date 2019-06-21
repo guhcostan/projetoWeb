@@ -3,12 +3,11 @@ package com.web.project.services;
 import com.web.project.models.Aula;
 import com.web.project.models.TipoAula;
 import com.web.project.repositories.AulaRepository;
+import java.util.List;
+import java.util.Optional;
 import javassist.NotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
-import java.util.List;
-import java.util.Optional;
 
 @Service
 public class AulaService {

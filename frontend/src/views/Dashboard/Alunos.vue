@@ -1,7 +1,6 @@
 <template>
     <el-container>
-        <Breadcrumb :professor="professor"></Breadcrumb>
-        <el-row class="row" type="flex" justify="space-between" align="middle">
+			  <el-row class="row" type="flex" justify="space-between" align="middle">
             <el-col class="aluno-head" :span="24" :md="5">
                 <h1>Alunos</h1>
             </el-col>
@@ -13,19 +12,19 @@
 </template>
 
 <script>
-import Breadcrumb from '@/components/Breadcrumb.vue';
+    import Breadcrumb from '@/components/Breadcrumb.vue';
 
-export default {
-    name: "Alunos",
-    data() {
-        return {
-            professor: 'Rafael Durelli'
+    export default {
+        name: "Alunos",
+        data() {
+            return {
+                professor: 'Rafael Durelli'
+            }
+        },
+        components: {
+            Breadcrumb
         }
-    },
-    components: {
-        Breadcrumb
     }
-}
 </script>
 
 <style lang="scss">

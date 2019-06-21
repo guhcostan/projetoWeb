@@ -1,11 +1,8 @@
 package com.web.project.models;
 
 
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
-
+import java.io.File;
+import java.time.LocalDate;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -13,8 +10,10 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
-import java.io.File;
-import java.time.LocalDate;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
 @Data
 @Builder
@@ -45,5 +44,18 @@ public class ProjetoPesquisa {
 	@ManyToOne
 	@JoinColumn(name = "id_aluno", nullable = false)
 	private Aluno pesquisador;
+
+	public ProjetoPesquisa(String nome, String resumo, LocalDate anoInicio, LocalDate anoTermino,
+		File arquivo, String dissertacao, String tese, Aluno pesquisador) {
+		this.nome = nome;
+		this.resumo = resumo;
+		this.anoInicio = anoInicio;
+		this.anoTermino = anoTermino;
+		this.arquivo = arquivo;
+		this.dissertacao = dissertacao;
+		this.tese = tese;
+		this.pesquisador = pesquisador;
+
+	}
 
 }

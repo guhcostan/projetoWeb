@@ -4,27 +4,26 @@
 </template>
 
 <script>
-import http from "../utils/http";
+    import http from "../utils/http";
 
-export default {
-  name: 'HelloWorld',
-  props: {
-    msg: String
-  },
-    methods: {
-        pingBack(){
-            http.get({url: '/teste'}).then((data) =>
-            {
-                console.log(data)
-            });
+    export default {
+        name: 'HelloWorld',
+        props: {
+            msg: String
+        },
+        methods: {
+            pingBack() {
+                http.get({ url: '/teste' }).then((data) => {
+                    console.log(data)
+                });
+            }
         }
     }
-}
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped lang="scss">
-    #helloWorld{
+<style lang="scss" scoped>
+    #helloWorld {
         text-align: center;
     }
 </style>

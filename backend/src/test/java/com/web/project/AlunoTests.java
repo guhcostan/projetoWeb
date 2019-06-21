@@ -1,5 +1,7 @@
 package com.web.project;
 
+import static org.assertj.core.api.Assertions.assertThatThrownBy;
+
 import com.web.project.controllers.AlunoController;
 import javassist.NotFoundException;
 import org.junit.Before;
@@ -9,8 +11,6 @@ import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
 import org.springframework.test.web.servlet.result.MockMvcResultMatchers;
 import org.springframework.test.web.servlet.setup.MockMvcBuilders;
-
-import static org.assertj.core.api.Assertions.assertThatThrownBy;
 
 public class AlunoTests extends ProjectApplicationTests {
 
@@ -30,14 +30,17 @@ public class AlunoTests extends ProjectApplicationTests {
 	@Test
 	public void getAllAlunos() throws Exception {
 
-		this.mockMvc.perform(MockMvcRequestBuilders.get("/alunos")).andExpect(MockMvcResultMatchers.status().isOk());
+		this.mockMvc.perform(MockMvcRequestBuilders.get("/alunos"))
+			.andExpect(MockMvcResultMatchers.status().isOk());
 	}
 
 	@Test
 	public void createAluno() throws Exception {
 
-		this.mockMvc.perform(MockMvcRequestBuilders.post("/cadastrarAluno").param("nome", "Gustavo").param("cpf",
-				"12312312312").param("tipoAluno", "DOUTORADO")).andExpect(MockMvcResultMatchers.status().isOk());
+		this.mockMvc.perform(
+			MockMvcRequestBuilders.post("/cadastrarAluno").param("nome", "Gustavo").param("cpf",
+				"12312312312").param("tipoAluno", "DOUTORADO"))
+			.andExpect(MockMvcResultMatchers.status().isOk());
 	}
 
 	@Test
@@ -47,7 +50,9 @@ public class AlunoTests extends ProjectApplicationTests {
 
 		alunoController.createAluno("Gustavo", "12312312312", "DOUTORADO");
 
-		this.mockMvc.perform(MockMvcRequestBuilders.delete("/deletaAluno").param("cpf", "12312312312")).andExpect(MockMvcResultMatchers.status().isOk());
+		this.mockMvc
+			.perform(MockMvcRequestBuilders.delete("/deletaAluno").param("cpf", "12312312312"))
+			.andExpect(MockMvcResultMatchers.status().isOk());
 	}
 
 	@Test
@@ -56,7 +61,9 @@ public class AlunoTests extends ProjectApplicationTests {
 		databaseCleaner.cleanAll();
 
 		assertThatThrownBy(() -> this.mockMvc.perform(MockMvcRequestBuilders.delete(
-				"/deletaAluno").param("cpf", "12312312312")).andExpect(MockMvcResultMatchers.status().isNotFound())).hasCause(new NotFoundException("Aluno não encontrado"));
+			"/deletaAluno").param("cpf", "12312312312"))
+			.andExpect(MockMvcResultMatchers.status().isNotFound()))
+			.hasCause(new NotFoundException("Aluno não encontrado"));
 	}
 
 	@Test
@@ -66,7 +73,9 @@ public class AlunoTests extends ProjectApplicationTests {
 
 		alunoController.createAluno("Gustavo", "12312312312", "DOUTORADO");
 
-		this.mockMvc.perform(MockMvcRequestBuilders.post("/adicionarProjetoAluno").param("cpfAluno", "12312312312").param("idProjeto", "1")).andExpect(MockMvcResultMatchers.status().isOk());
+		this.mockMvc.perform(
+			MockMvcRequestBuilders.post("/adicionarProjetoAluno").param("cpfAluno", "12312312312")
+				.param("idProjeto", "1")).andExpect(MockMvcResultMatchers.status().isOk());
 
 	}
 
