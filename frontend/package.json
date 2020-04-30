@@ -11,7 +11,7 @@
     "axios": "^0.18.1",
     "blockui": "^1.0.0",
     "element-ui": "^2.9.1",
-    "jquery": "^3.4.1",
+    "jquery": "^3.5.0",
     "toastr": "^2.1.4",
     "vue": "^2.6.10",
     "vue-router": "^3.0.6",
