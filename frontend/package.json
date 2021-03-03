@@ -24,7 +24,7 @@
     "eslint": "^5.16.0",
     "eslint-plugin-vue": "^5.2.2",
     "fibers": "^4.0.1",
-    "pug": "^2.0.3",
+    "pug": "^3.0.1",
     "pug-plain-loader": "^1.0.0",
     "sass": "^1.21.0",
     "sass-loader": "^7.1.0",
